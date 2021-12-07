@@ -62,3 +62,4 @@ group :production do
 end
 
 gem 'bootstrap', '~> 4.5'
+gem 'font-awesome-sass'
