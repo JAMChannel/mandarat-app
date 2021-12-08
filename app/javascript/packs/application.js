@@ -1,8 +1,12 @@
-import 'bootstrap';
+// import * as mdb from 'mdb-ui-kit'; // lib
+// import { Input } from 'mdb-ui-kit'; // module
+// import { Input as CustomInput } from 'mdb-ui-kit'; // module with custom name
 
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
+require('jquery')
+// import 'bootstrap';
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
