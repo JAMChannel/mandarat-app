@@ -20,7 +20,9 @@ sudo systemctl status mariadb
 
 ## nginx
 ```
+sudo vim /etc/nginx/conf.d/rails.conf
 sudo systemctl restart nginx
+sudo nginx -t
 ```
 
 ## アセットファイルをコンパイル
