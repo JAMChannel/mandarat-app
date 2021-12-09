@@ -63,6 +63,7 @@ GEM
     ast (2.4.2)
     autoprefixer-rails (10.3.3.0)
       execjs (~> 2)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.9.3)
       msgpack (~> 1.0)
@@ -101,6 +102,7 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     diff-lcs (1.4.4)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     execjs (2.8.1)
     factory_bot (6.2.0)
@@ -303,6 +305,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt_pbkdf
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5)
   byebug
@@ -312,6 +315,7 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-unicorn
   capybara (>= 2.15)
+  ed25519
   factory_bot_rails
   faker
   font-awesome-sass
