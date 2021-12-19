@@ -52,8 +52,17 @@ to{
 const BLOG = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 40%;
+top: 25%;
 right: calc(1rem + 2vw);
+transform: rotate(90deg) translate(-50%, -50%);
+text-decoration: none;
+z-index:1;
+`
+const TORERO = styled(NavLink)`
+color: ${props => props.theme.text};
+position: absolute;
+top: 60%;
+right: calc(1rem + 1vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index:1;
@@ -141,6 +150,22 @@ const Main = () => {
                     Blog
                 </motion.h2>
         </BLOG>
+        <TORERO to="/torero">
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Torero
+                </motion.h2>
+        </TORERO>
         <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{

@@ -8,6 +8,9 @@ import { lightTheme } from "./components/Themes"
 
 //Components
 import Main from './components/Main';
+import BlogPage from './components/BlogPage';
+import WorkPage from './components/WorkPage';
+import ToreroPage from './components/ToreroPage';
 
 function App() {
   // return <>
@@ -17,6 +20,9 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <Routes>
       <Route exact path="/" element={<Main/>}/>
+      <Route exact path="/work" element={<WorkPage/>}/>
+      <Route exact path="/blog" element={<BlogPage/>}/>
+      <Route exact path="/torero" element={<ToreroPage/>}/>
       </Routes>
 
     </ThemeProvider>
