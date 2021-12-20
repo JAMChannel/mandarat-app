@@ -1,9 +1,10 @@
 import React from 'react'
+import { Header } from '../subComponents/Header'
 
 function ToreroPage() {
   return (
     <div>
-      <p>test</p>
+      <Header />
     </div>
   )
 }
