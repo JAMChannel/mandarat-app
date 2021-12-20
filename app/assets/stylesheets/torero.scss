@@ -1,9 +1,15 @@
-.torero-header{
-  text-align: center;
-  h1{
-    font-size: 45px;
-    color: orange;
-    font-weight: 600;
-    text-shadow: 2px 2px 2px black;
+.torero{
+  background-image: image-url("mountain.jpg");
+  background-repeat: no-repeat;
+  height: 92vh;
+  .torero-header{
+    text-align: center;
+    h1{
+      font-size: 45px;
+      color: orange;
+      font-weight: 600;
+      text-shadow: 2px 2px 2px black;
+    }
   }
 }
+
