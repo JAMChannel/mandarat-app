@@ -6,7 +6,7 @@ import { Tasks } from './Tasks'
 
 export const TaskCard = () => {
   return (
-    <div>
+    <div className='torero-card'>
       <TaskCardTitle />
       <TaskCardDeleteButton />
       <TaskAddInput />
