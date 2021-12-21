@@ -7,10 +7,18 @@ export const TaskAddInput = ({
   taskList,
 }) => {
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // console.log(e)
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(e)
+    setTaskList([
+      ...taskList,
+      {text: inputText,
+      },
+    ]);
+    setInputText("");
+    console.log(...taskList)
+    console.log(inputText)
+  };
 
   const handleChange = (e) => {
     setInputText(e.target.value);
@@ -18,10 +26,11 @@ export const TaskAddInput = ({
   };
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input className='task-add-input'
         type="text" 
         onChange={handleChange}
+        value={inputText}
         placeholder='taskを入力'/>
       </form>
     </div>
