@@ -12,10 +12,12 @@ export const TaskAddInput = ({
     // console.log(e)
     setTaskList([
       ...taskList,
-      {text: inputText,
+      {
+        id: taskList.length,
+        text: inputText,
       },
     ]);
-    setInputText("");
+    setInputText(""); 
     console.log(...taskList)
     console.log(inputText)
   };
