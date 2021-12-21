@@ -1,7 +1,7 @@
 import React from 'react'
 import { Draggable } from "react-beautiful-dnd";
 
-export const Task = ({  task, taskList, setTaskList}) => {
+export const Task = ({  task, taskList, setTaskList, index}) => {
 
   const handleDelete = (id) => {
     console.log(id)
@@ -10,7 +10,7 @@ export const Task = ({  task, taskList, setTaskList}) => {
 
 
   return (
-    <Draggable index={task.id} draggableId={task.draggableId}>
+    <Draggable index={index} draggableId={task.draggableId}>
       {(provided) => (
         <div
           className="task-box"
