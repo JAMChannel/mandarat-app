@@ -70,3 +70,5 @@ end
 
 gem 'bootstrap', '~> 4.5'
 gem 'font-awesome-sass'
+# gem 'particles-js-rails', '2.0.0'
+
