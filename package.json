@@ -18,11 +18,11 @@
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-particles-js": "^3.6.0",
+    "react-particles-js": "^2.4.0",
     "react-router-dom": "^6.1.1",
     "react-toastify": "^8.1.0",
     "styled-components": "^5.3.3",
-    "tsparticles": "^1.37.5",
+    "tsparticles": "^1.31.1",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.2"
   },
