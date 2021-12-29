@@ -1,7 +1,2 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+# Portfolio.create(id:1,name: "todo-vue.js",text:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",url:"https://rails-api-curriculum-jam.herokuapp.com/",github: "https://github.com/JAMChannel/rails-api-curriculum-jam")
