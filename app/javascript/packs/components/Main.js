@@ -15,7 +15,7 @@ import BigTitle from '../subComponents/BigTitlte'
 const MainContainer = styled.div`
   background: #fff;
   width: 100vw;
-  height: 92vh;
+  height: 100vh;
   overflow: hidden;
 
   position: relative;
