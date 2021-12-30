@@ -70,6 +70,11 @@ end
 
 gem 'bootstrap', '~> 4.5'
 gem 'font-awesome-sass'
+
+# active storage
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+
+# S3
+gem "aws-sdk-s3", require: false
 
