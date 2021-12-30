@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Route, Routes } from "react-router"
+import { Route, Routes, useLocation } from "react-router"
 // import { Route, Routes } from "react-router-dom"
 import GlobalStyle from "./globalStyles"
 import { ThemeProvider } from "styled-components"
@@ -11,19 +11,23 @@ import Main from './components/Main';
 import BlogPage from './components/BlogPage';
 import WorkPage from './components/WorkPage';
 import ToreroPage from './components/ToreroPage';
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   // return <>
   // </>
   return <>
     <GlobalStyle />
     <ThemeProvider theme={lightTheme}>
-      <Routes>
-      <Route exact path="/" element={<Main/>}/>
-      <Route exact path="/work" element={<WorkPage/>}/>
-      <Route exact path="/blog" element={<BlogPage/>}/>
-      <Route exact path="/torero" element={<ToreroPage/>}/>
-      </Routes>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname} >
+        <Route exact path="/" element={<Main/>}/>
+        <Route exact path="/work" element={<WorkPage/>}/>
+        <Route exact path="/blog" element={<BlogPage/>}/>
+        <Route exact path="/torero" element={<ToreroPage/>}/>
+        </Routes>
+      </AnimatePresence>
 
     </ThemeProvider>
   </>

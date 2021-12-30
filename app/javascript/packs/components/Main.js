@@ -15,7 +15,7 @@ import BigTitle from '../subComponents/BigTitlte'
 const MainContainer = styled.div`
   background: #fff;
   width: 100vw;
-  height: 92vh;
+  height: 100vh;
   overflow: hidden;
 
   position: relative;
@@ -190,7 +190,7 @@ const Main = () => {
             Work
           </motion.h2>
         </WORK>
-        <BigTitle text="JMD" top="10%" left="5%" />
+        <BigTitle text="JamChannel" top="10%" left="5%" />
       </Container>
       {click ? <Intro click={click} /> : null}
     </MainContainer>

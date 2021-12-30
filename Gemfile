@@ -70,5 +70,11 @@ end
 
 gem 'bootstrap', '~> 4.5'
 gem 'font-awesome-sass'
-# gem 'particles-js-rails', '2.0.0'
+
+# active storage
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
+# S3
+gem "aws-sdk-s3", require: false
 
