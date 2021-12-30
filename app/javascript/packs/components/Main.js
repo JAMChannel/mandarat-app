@@ -190,7 +190,7 @@ const Main = () => {
             Work
           </motion.h2>
         </WORK>
-        <BigTitle text="JMD" top="10%" left="5%" />
+        <BigTitle text="JamChannel" top="10%" left="5%" />
       </Container>
       {click ? <Intro click={click} /> : null}
     </MainContainer>

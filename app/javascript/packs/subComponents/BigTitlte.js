@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const Text = styled.h1`
 position: fixed;
+font-family: 'Smooch', cursive;
 top: ${props => props.top};
 left: ${props => props.left};
 right: ${props => props.right};
