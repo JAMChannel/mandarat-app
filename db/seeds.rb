@@ -18,7 +18,7 @@ end
   ["vue.js"],
   ["JavaScript"],
 ].each do |tagname|
-  PortfolioTag.create!({ tagname: tagname })
+  Tag.create!({ tagname: tagname })
 end
 
 [

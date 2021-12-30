@@ -31,10 +31,15 @@ const Title = styled.h2`
 font-size: calc(1em + 0.5vw);
 `
 
-const Description = styled.h2`
-font-size: calc(0.8em + 0.3vw);
-font-family: 'Karla',sans-serif;
-font-weight: 500;
+// const Description = styled.h2`
+// font-size: calc(0.8em + 0.3vw);
+// font-family: 'Karla',sans-serif;
+// font-weight: 500;
+// `
+
+const Description = styled.div`
+height: 100px;
+width: 100px;
 `
 
 const Tags = styled.div`
@@ -101,12 +106,16 @@ const Item = {
 
 const Card = (props) => {
 
-  const {id, name, text, tags, url, github} = props.data;
+  const {id, name, text, tags, url, github, image} = props.data;
 
   return (
     <Box key={id} variants={Item}>
       <Title>{name}</Title>
-      <Description>{text}</Description>
+      {/* <Description>{text}</Description>  */}
+      <Description>
+      <img key={id} src={image} width={190} height={80}/>
+      </Description>
+      
       <Tags>
         {
           tags.map((t,id) => {
