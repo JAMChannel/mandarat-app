@@ -1,4 +1,5 @@
-<form id="login" class="text-center needs-validation" action="login" method="post" name="login-form">
+<!-- <form id="login" class="text-center needs-validation" action="login" method="post" name="login-form"> -->
+<%= form_with  url:login_path, local: true do |f| %>
   <p class="status"></p>
   <div class="text-center mb-3">
     <div class="wp-social-login-widget">
@@ -12,8 +13,9 @@
   </div>
   <p class="text-center">or:</p>
   <div class="form-outline form-auth-mdb mb-4">
-    <input type="text" id="username" class="form-control" name="username" required="">
-    <label class="form-label" for="username" style="margin-left: 0px;">Your e-mail or username</label>
+    <!-- <input type="text" id="username" class="form-control" name="username" required=""> -->
+    <%= f.email_field :email, autofocus: true, id: "username", autocomplete: "email",class: "form-control",name: "email",required: "" %>
+    <label class="form-label" for="username" style="margin-left: 0px;">Your e-mail</label>
     <div class="form-notch">
       <div class="form-notch-leading" style="width: 9px;"></div>
       <div class="form-notch-middle" style="width: 146.4px;"></div>
@@ -21,7 +23,8 @@
     </div>
   </div>
   <div class="form-outline form-auth-mdb mb-4">
-    <input type="password" id="password" class="form-control" name="password" autocomplete="off" required="">
+    <!-- <input type="password" id="password" class="form-control" name="password" autocomplete="off" required=""> -->
+     <%= f.password_field :password, autocomplete: "new-password",class: "form-control", id: "password", name: "password", required: ""%>
     <label class="form-label" for="password" style="margin-left: 0px;">Your password</label>
     <div class="form-notch">
       <div class="form-notch-leading" style="width: 9px;"></div>
@@ -36,4 +39,5 @@
   <div class="text-center">
     <p>Not a member? <a href="#" class="auth-modal-toggle" data-auth-modal-tab="sign-up">Register</a></p>
   </div>
-</form>
+<% end %>
+<!-- </form> -->

@@ -16,7 +16,7 @@
 
   <div class="form-outline form-auth-mdb mb-4">
     <!-- <input type="text" id="signonusername" class="form-control" name="signonusername" required="" minlength="3"> -->
-    <%= f.text_field :username, autofocus: true ,class: "form-control",id:"signonusername", name: "signonusername",required: ""%>
+    <%= f.text_field :username, autofocus: true ,class: "form-control",id:"signonusername",required: ""%>
     <label for="signonusername" class="form-label" style="margin-left: 0px;">Your username</label>
     <div class="invalid-feedback">Please provide a valid username.</div>
     <div class="form-notch">
@@ -27,7 +27,7 @@
   </div>
   <div class="form-outline form-auth-mdb mb-4">
     <!-- <input type="email" id="signonemail" class="form-control" name="email" required=""> -->
-    <%= f.email_field :email, autofocus: true, id: "signonemail", autocomplete: "email",class: "form-control",name: "email",required: "" %>
+    <%= f.email_field :email, autofocus: true, id: "signonemail", autocomplete: "email",class: "form-control",required: "" %>
     <label for="email" class="form-label" style="margin-left: 0px;">Your email</label>
     <div class="invalid-feedback">Please provide a valid email.</div>
     <div class="form-notch">
@@ -38,7 +38,7 @@
   </div>
   <div class="form-outline form-auth-mdb mb-4">
     <!-- <input type="password" id="signonpassword" class="form-control" name="signonpassword" autocomplete="off" required="" minlength="5"> -->
-    <%= f.password_field :password, autocomplete: "new-password",class: "form-control", id: "signonpassword", name: "signonpassword", required: ""%>
+    <%= f.password_field :password, autocomplete: "new-password",class: "form-control", id: "signonpassword" , required: ""%>
     <label for="signonpassword" class="form-label" style="margin-left: 0px;">Your password</label>
     <div class="invalid-feedback">Please provide a valid password.</div>
     <div class="form-notch">
@@ -49,7 +49,7 @@
   </div>
   <div class="form-outline form-auth-mdb mb-4">
     <!-- <input type="password" id="password2" class="form-control" name="password2" autocomplete="off" required="" minlength="5"> -->
-    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control", id: "password2", name: "password2", required: ""%>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control", id: "password2", required: ""%>
     <label for="password2" class="form-label" style="margin-left: 0px;">Repeat password</label>
     <div id="repeat-password-feedback" class="invalid-feedback">Please repeat the password.</div>
     <div class="form-notch">
@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="form-text text-center small text-muted mb-4">
-    By signing up you agree to data processing by the administrator: StartupFlow s.c. located in Kijowska 7, Warsaw. The administrator processes data following the <a target="_blank" href="https://mdbootstrap.com/privacy-policy/">Privacy Policy</a>.
+    By signing up you agree to data processing by the administrator.
   </div>
   <button class="btn btn-primary btn-block mb-3" id="AJAXAuthRegisterBtn" type="submit" value="SIGNUP">
     Sign up
