@@ -6,6 +6,7 @@
   tabindex="-1"
   aria-labelledby="staticBackdropLabel"
   aria-hidden="true" >
+
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
@@ -19,118 +20,10 @@
         </ul>
         <div class="tab-content">
           <div class="tab-pane fade in show active" id="navbarLogin-login" role="tabpanel">
-            <form id="login" class="text-center needs-validation" action="login" method="post" name="login-form">
-              <p class="status"></p>
-              <div class="text-center mb-3">
-                <div class="wp-social-login-widget">
-                  <div class="wp-social-login-connect-with">Connect with:</div>
-                  <div class="wp-social-login-provider-list">
-                    <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook btn btn-primary  mx-1 ripple-surface" data-provider="Facebook" role="button" style="min-width: 37px;"><i class="fab fa-facebook-f"></i></a>
-                    <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" data-provider="Google" role="button"><i class="fab fa-google"></i></a>
-                    <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter btn btn-primary  mx-1" data-provider="Twitter" role="button"><i class="fab fa-twitter"></i></a>
-                  </div>
-                </div>
-              </div>
-              <p class="text-center">or:</p>
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="text" id="username" class="form-control" name="username" required="">
-                <label class="form-label" for="username" style="margin-left: 0px;">Your e-mail or username</label>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 146.4px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="password" id="password" class="form-control" name="password" autocomplete="off" required="">
-                <label class="form-label" for="password" style="margin-left: 0px;">Your password</label>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 92.8px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="justify-content-center mb-4">
-                <a href="https://mdbootstrap.com/my-account/lost-password/">Forgot password?</a>
-              </div>
-              <button class="btn btn-primary btn-block mb-4" type="submit" value="LOGIN">Sign in</button>
-              <div class="text-center">
-                <p>Not a member? <a href="#" class="auth-modal-toggle" data-auth-modal-tab="sign-up">Register</a></p>
-              </div>
-            </form>
+            <%= render 'template/login' %>
           </div>
           <div class="tab-pane fade" id="navbarLogin-signup" role="tabpanel">
-            <form id="register" class="text-center needs-validation" action="register" method="post" name="register-form">
-              <p class="status"></p>
-              <div class="text-center mb-3">
-                <div class="wp-social-login-widget">
-                  <div class="wp-social-login-connect-with">Connect with:</div>
-                  <div class="wp-social-login-provider-list">
-                    <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook btn btn-primary  mx-1 ripple-surface" data-provider="Facebook" role="button" style="min-width: 37px;"><i class="fab fa-facebook-f"></i></a>
-                    <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" data-provider="Google" role="button"><i class="fab fa-google"></i></a>
-                    <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter btn btn-primary  mx-1" data-provider="Twitter" role="button"><i class="fab fa-twitter"></i></a>
-                  </div>
-                </div>
-              </div>
-              <p class="text-center">or:</p>
-              <!-- Name input -->
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="text" id="signonname" class="form-control" name="signonname" required="" minlength="3">
-                <label for="signonname" class="form-label" style="margin-left: 0px;">Your name</label>
-                <div class="invalid-feedback">Please provide a valid name.</div>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 8px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="text" id="signonusername" class="form-control" name="signonusername" required="" minlength="3">
-                <label for="signonusername" class="form-label" style="margin-left: 0px;">Your username</label>
-                <div class="invalid-feedback">Please provide a valid username.</div>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 8px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="email" id="signonemail" class="form-control" name="email" required="">
-                <label for="email" class="form-label" style="margin-left: 0px;">Your email</label>
-                <div class="invalid-feedback">Please provide a valid email.</div>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 8px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="password" id="signonpassword" class="form-control" name="signonpassword" autocomplete="off" required="" minlength="5">
-                <label for="signonpassword" class="form-label" style="margin-left: 0px;">Your password</label>
-                <div class="invalid-feedback">Please provide a valid password.</div>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 8px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="form-outline form-auth-mdb mb-4">
-                <input type="password" id="password2" class="form-control" name="password2" autocomplete="off" required="" minlength="5">
-                <label for="password2" class="form-label" style="margin-left: 0px;">Repeat password</label>
-                <div id="repeat-password-feedback" class="invalid-feedback">Please repeat the password.</div>
-                <div class="form-notch">
-                  <div class="form-notch-leading" style="width: 9px;"></div>
-                  <div class="form-notch-middle" style="width: 8px;"></div>
-                  <div class="form-notch-trailing"></div>
-                </div>
-              </div>
-              <div class="form-text text-center small text-muted mb-4">
-                By signing up you agree to data processing by the administrator: StartupFlow s.c. located in Kijowska 7, Warsaw. The administrator processes data following the <a target="_blank" href="https://mdbootstrap.com/privacy-policy/">Privacy Policy</a>.
-              </div>
-              <button class="btn btn-primary btn-block mb-3" id="AJAXAuthRegisterBtn" type="submit" value="SIGNUP">
-                Sign up
-              </button>
-            </form>
+            <%= render 'template/register', user: user%>
           </div>
         </div>
       </div>
