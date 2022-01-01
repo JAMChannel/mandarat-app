@@ -1,0 +1,2 @@
+class Mandarat < ApplicationRecord
+end

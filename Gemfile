@@ -78,3 +78,6 @@ gem 'image_processing', '~> 1.2'
 # S3
 gem "aws-sdk-s3", require: false
 
+#ログイン機能
+gem 'sorcery'
+
