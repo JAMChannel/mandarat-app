@@ -8,7 +8,9 @@ class UsersController < ApplicationController
       redirect_to mandarats_path, success: 'ユーザーを作成しました'
     else
       flash.now[:danger] = 'ユーザーの作成に失敗しました'
-      render root_path
+      @user = User.new
+      # render root_path
+       redirect_to partial: 'template/modallogin' , locals: { user: @user}
     end
   end
 
