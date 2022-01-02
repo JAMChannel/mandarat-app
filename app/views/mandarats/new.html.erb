@@ -20,7 +20,8 @@
           <h5 class="modal-title" id="exampleModalLabel">Mndarat form</h5>
         </div>
         <div class="modal-body p-4">
-          <%= form_with model:@mandarat, local:true do |f| %>
+          <%= form_with model:@mandarat, url:mandarats_path, local:true do |f| %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
             <!-- Text input -->
             <div class="form-outline mb-4">
               <%= f.text_field :title ,class: "form-control" ,id: "form6Example"%>
@@ -28,31 +29,36 @@
             <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 97.6px;"></div><div class="form-notch-trailing"></div></div></div>
 
             <!-- 2 column grid layout with text inputs for the first and last names -->
-            <div class="row mb-4">
-              <div class="col">
-                <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example1"%>
-                  <label class="form-label" for="form6Example1" style="margin-left: 0px;">1st name</label>
-                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+              <div class="row mb-4">
+                  <div class="col">
+                    <%= f.fields_for :mandarats do |i| %>
+                      <div class="form-outline form-new-text">
+                        <%= i.hidden_field :user_id, :value => current_user.id %>
+                        <%= i.text_field :name ,class: "form-control" ,id: "form6Example1"%>
+                        <label class="form-label" for="form6Example1" style="margin-left: 0px;">Mandarat name</label>
+                      <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                    <% end %>
+                  </div>
+                  <div class="col">
+                <%= f.fields_for :mandarats do |i| %>
+                    <div class="form-outline form-new-text">
+                      <%= i.hidden_field :user_id, :value => current_user.id %>
+                      <%= i.text_field :name ,class: "form-control" ,id: "form6Example2"%>
+                      <label class="form-label" for="form6Example2" style="margin-left: 0px;">Mandarat name</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
+                <% end %>
+                  </div>
               </div>
+            <!--<div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example2"%>
-                  <label class="form-label" for="form6Example2" style="margin-left: 0px;">2st name</label>
-                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
-              </div>
-            </div>
-
-            <div class="row mb-4">
-              <div class="col">
-                <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example3"%>
+                  <%#= f.text_field :name ,class: "form-control" ,id: "form6Example3"%>
                   <label class="form-label" for="form6Example3" style="margin-left: 0px;">3st name</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example4"%>
+                  <%#= f.text_field :name ,class: "form-control" ,id: "form6Example4"%>
                   <label class="form-label" for="form6Example4" style="margin-left: 0px;">4st name</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
               </div>
@@ -61,13 +67,13 @@
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example5"%>
+                  <%#= f.text_field :name ,class: "form-control" ,id: "form6Example5"%>
                   <label class="form-label" for="form6Example5" style="margin-left: 0px;">5st name</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example6"%>
+                  <%#= f.text_field :name ,class: "form-control" ,id: "form6Example6"%>
                   <label class="form-label" for="form6Example6" style="margin-left: 0px;">6st name</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
               </div>
@@ -76,17 +82,17 @@
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example7"%>
+                  <%#= f.text_field :name ,class: "form-control" ,id: "form6Example7"%>
                   <label class="form-label" for="form6Example7" style="margin-left: 0px;">7st name</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <%= f.text_field :name ,class: "form-control" ,id: "form6Example8"%>
+                  <%#= f.text_field :name ,class: "form-control" ,id: "form6Example8"%>
                   <label class="form-label" for="form6Example8" style="margin-left: 0px;">8st name</label>
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
               </div>
-            </div>
+            </div> -->
 
 
             <!-- Text input -->

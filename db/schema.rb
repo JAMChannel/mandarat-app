@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_12_31_061048) do
   end
 
   create_table "mandarats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.string "name", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
