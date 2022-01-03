@@ -2,7 +2,11 @@ class Form::MandaratCollection
   include ActiveModel::Model
 
   DEFAULT_ITEM_COUNT = 4
+<<<<<<< HEAD
   attr_accessor :mandarats, :name, :user_id
+=======
+  attr_accessor :mandarats
+>>>>>>> parent of 6ae2bcf (index実装)
 
   # def initialize(attributes = {})
   #   super attributes

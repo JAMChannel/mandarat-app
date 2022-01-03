@@ -21,6 +21,7 @@
         </div>
         <div class="modal-body p-4">
           <%= form_with model:@mandarat, url:mandarats_path, local:true do |f| %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
             <!-- Text input -->
             <div class="form-outline mb-4">
               <%= f.text_field :name ,class: "form-control" ,id: "form6Example"%>
