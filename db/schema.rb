@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_01_03_061048) do
-=======
-ActiveRecord::Schema.define(version: 2021_12_31_061048) do
->>>>>>> parent of 6ae2bcf (index実装)
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -92,10 +88,7 @@ ActiveRecord::Schema.define(version: 2021_12_31_061048) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-<<<<<<< HEAD
   add_foreign_key "mandarats", "titles"
-=======
->>>>>>> parent of 6ae2bcf (index実装)
   add_foreign_key "mandarats", "users"
   add_foreign_key "portfolio_tags", "portfolios"
   add_foreign_key "portfolio_tags", "tags"
