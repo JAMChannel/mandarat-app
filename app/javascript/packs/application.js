@@ -7,6 +7,8 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 // import 'bootstrap';
+require("../three1.js")
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -15,5 +17,7 @@ require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
 
 

@@ -21,10 +21,10 @@
         </div>
         <div class="modal-body p-4">
           <%= form_with model:@mandarat, url:mandarats_path, local:true do |f| %>
-          <%= f.hidden_field :user_id, :value => current_user.id %>
             <!-- Text input -->
             <div class="form-outline mb-4">
               <%= f.text_field :title ,class: "form-control" ,id: "form6Example"%>
+              <%= f.hidden_field :user_id, :value => current_user.id %>
               <label class="form-label" for="form6Example" style="margin-left: 0px;">Title</label>
             <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 97.6px;"></div><div class="form-notch-trailing"></div></div></div>
 

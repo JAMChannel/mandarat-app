@@ -12,4 +12,6 @@ class User < ApplicationRecord
   # passwordというDBに存在しない仮想的な属性(virtual attributes)が追加される。これがないと保存できない
 
   has_many :mandarats, dependent: :destroy
+  # has_many :mandarat_titles, dependent: :destroy
+  has_one :mandarat_title,  dependent: :destroy
 end

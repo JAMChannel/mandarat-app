@@ -7,7 +7,8 @@ class UserSessionsController < ApplicationController
       redirect_back_or_to mandarats_path, success: 'ログインしました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
-      render :new
+      @user = User.new
+      format.js { render partial: "shared/login",messages: @user.errors.full_messages ,lokestatus: :unprocessable_entity }
     end
   end
 

@@ -2,7 +2,7 @@ class Form::MandaratCollection
   include ActiveModel::Model
 
   DEFAULT_ITEM_COUNT = 4
-  attr_accessor :mandarats
+  attr_accessor :mandarats, :title, :user_id
 
   # def initialize(attributes = {})
   #   super attributes
@@ -33,6 +33,9 @@ class Form::MandaratCollection
     def save
       # 実際にやりたいことはこれだけ
       # self.mandarats.map(&:save!)
+      ActiveRecord::Base.transaction do
+        MandaratTitle.create(title: title,user_id: user_id)
+      end
   
       # 複数件全て保存できた場合のみ実行したいので、transactionを使用する
       Mandarat.transaction do
