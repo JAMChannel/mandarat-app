@@ -112,9 +112,9 @@ const Card = (props) => {
     <Box key={id} variants={Item}>
       <Title>{name}</Title>
       {/* <Description>{text}</Description>  */}
-      <Description>
+      {/* <Description>
       <img key={id} src={image} width={190} height={80}/>
-      </Description>
+      </Description> */}
       
       <Tags>
         {

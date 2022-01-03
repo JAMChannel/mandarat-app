@@ -3,5 +3,5 @@ class Portfolio < ApplicationRecord
   has_many :tags, through: :portfolio_tags
 
   has_one_attached :image
-  belongs_to :user
+  # belongs_to :user
 end

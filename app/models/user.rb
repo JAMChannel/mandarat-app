@@ -13,5 +13,5 @@ class User < ApplicationRecord
 
   has_many :mandarats, dependent: :destroy
   # has_many :mandarat_titles, dependent: :destroy
-  has_one :mandarat_title,  dependent: :destroy
+  has_one :title,  dependent: :destroy
 end
