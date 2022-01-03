@@ -47,12 +47,8 @@ class MandaratsController < ApplicationController
 
   def mandarat_params
     # params.require(:form_mandarat_collection).permit(mandarats_attributes: Form::Mandarat::REGISTRABLE_ATTRIBUTES).merge(user_id: current_user.id)
-<<<<<<< HEAD
+
     # params.require(:form_mandarat_collection).permit(mandarats_attributes: [:name,:user_id])
     params.require(:form_mandarat_collection).permit(:name, :user_id, mandarats_attributes: [:name,:user_id,:title_id])
-=======
-    params.require(:form_mandarat_collection).permit(mandarats_attributes: [:name,:user_id])
->>>>>>> parent of 6ae2bcf (index実装)
-  end
 
 end
