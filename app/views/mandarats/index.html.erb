@@ -1,4 +1,104 @@
- <%#= render 'template/header' %>
- <%= link_to 'ログアウト', logout_path, method: :delete %>
-<h1>Mandarats#index</h1>
-<p>Find me in app/views/mandarats/index.html.erb</p>
+<div class="mandarat">
+  <div class="mandarat-main">
+    <section class="pb-4">
+        <div class=" border">
+        
+        <section class="w-100 p-4 text-center">
+          <table class="table table-borderless">
+            <thead>
+
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                <div class="mandarat-main-button">
+                    <%= @mandarat[0].name %>
+                </div>
+                </td>
+                <!-- <th scope="row">1</th> -->
+                <td>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat[1].name %>
+                  </div>
+                </td>
+                <td>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat[2].name %>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <!-- <th scope="row">2</th> -->
+                <td>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat[3].name %>
+                  </div>
+                </td>
+                <td>
+                  <div class="mandarat-main-button">
+                    <%= @title.title %>
+                  </div>
+                  </td>
+                <td>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat[4].name %>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <!-- <th scope="row">3</th> -->
+                <td>
+                <div>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat[4].name %>
+                  </div>
+                </div>
+                </td>
+                <td>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat[6].name %>
+                  </div>
+                </td>
+                <td>
+                <div class="mandarat-main-button">
+                  <%= @mandarat[7].name %>
+                </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div class="p-4 text-center">
+          <%= link_to logout_path, method: :delete, data: {confirm: "ログアウトしますか？"} ,class:"btn btn-link px-3",style:"color: black;"  do %>
+            <i class="fas fa-code me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">ログアウト</span>
+          <% end %>
+            <a class="btn btn-link px-3" data-ripple-color="hsl(0, 0%, 67%)" style="color: black;"><i class="fas fa-bars me-md-2 pe-none"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">Edit in sandbox</span></a>
+        </div>
+        
+        </div>
+    </section>
+    <%# 9.times do |n| %>
+      <%# if n == 4 %>
+        <%#= @title.title %>
+      <%# elsif n == 0 %>
+        <%#= @mandarat[0].name %>
+      <%# elsif n == 1 %>
+        <%#= @mandarat[1].name %>
+      <%# elsif n == 2 %>
+        <%#= @mandarat[2].name %>
+      <%# elsif n == 3 %>
+        <%#= @mandarat[3].name %>
+      <%# elsif n == 5 %>
+        <%#= @mandarat[4].name %>
+      <%# elsif n == 6 %>
+        <%#= @mandarat[6].name %>
+      <%# else n == 7 %>
+        <%#= @mandarat[7].name %>
+      <%# end %>
+    <%# end %>
+  </div>
+  <div class="mandarat-font">
+    <canvas id="myCanvas"></canvas>
+  </div>
+</div>

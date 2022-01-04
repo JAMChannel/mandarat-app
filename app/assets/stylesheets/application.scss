@@ -4,6 +4,8 @@
 @import 'homes';
 @import 'torero';
 @import 'mandarats-background';
+@import 'mandarats-index';
+
 
 
 * {
@@ -37,6 +39,11 @@ footer{
   // background-color: #fff;
   background-color: rgba(255,0,0,0);
 
+}
+
+.test{
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 
