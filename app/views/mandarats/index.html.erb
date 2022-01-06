@@ -1,8 +1,9 @@
+
 <div class="mandarat">
   <div class="mandarat-main">
+  
     <section class="pb-4">
         <div class=" border">
-        
         <section class="w-100 p-4 text-center">
           <table class="table table-borderless">
             <thead>
@@ -73,7 +74,10 @@
           <%= link_to logout_path, method: :delete, data: {confirm: "ログアウトしますか？"} ,class:"btn btn-link px-3",style:"color: black;"  do %>
             <i class="fas fa-code me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">ログアウト</span>
           <% end %>
-            <a class="btn btn-link px-3" data-ripple-color="hsl(0, 0%, 67%)" style="color: black;"><i class="fas fa-bars me-md-2 pe-none"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">Edit in sandbox</span></a>
+          <button  class="drawer-toggle btn btn-link px-3" style="color: black;">
+            <i class="fas fa-bars me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">navbar</span>
+          </button>
+            <%= render 'template/modallsideber'%>
         </div>
         
         </div>

@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){
 
+
   window.addEventListener('load', Resize);
   window.addEventListener('resize', Resize);
   

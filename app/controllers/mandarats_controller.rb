@@ -1,8 +1,12 @@
 class MandaratsController < ApplicationController
   before_action :require_login, only: %i[index show new create edit update destroy]
   def index
-    @mandarat = current_user.mandarats
-    @title = current_user.mandarat_title
+    # if current_user.mandarats == true
+        @mandarat = current_user.mandarats
+        @title = current_user.mandarat_title
+    # else
+      # redirect_to new_mandarat_path
+    # end
 
     # @items = []
     # 9.times do |n|
