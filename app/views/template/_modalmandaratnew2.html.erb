@@ -18,12 +18,42 @@
         <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">...test2</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="">
-          Close
-        </button>
-        <button type="button" class="btn btn-primary">Understood</button>
+      <div class="modal-body">
+      <% if @mandarat[2].targets.exists? %>
+        <div><p>...test</p></div>
+      <% else %>
+        <%= form_with model:@target, url:targets_path, local:true do |f| %>
+          <div class="form-outline mb-4">
+            <div class="row mb-4">
+                <div class="col">
+                  <%= f.fields_for :targets do |i| %>
+                    <div class="form-outline form-new-text">
+                      <%= i.hidden_field :user_id, :value => current_user.id %>
+                      <%= i.hidden_field :mandarat_id, :value => @item2 %>
+                      <%= i.text_field :name ,class: "form-control" ,id: "form6Example1"%>
+                      <label class="form-label" for="form6Example1" style="margin-left: 0px;">Mandarat name</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                  <% end %>
+                </div>
+                <div class="col">
+                  <%= f.fields_for :targets do |i| %>
+                    <div class="form-outline form-new-text">
+                      <%= i.hidden_field :user_id, :value => current_user.id %>
+                      <%= i.hidden_field :mandarat_id, :value => @item2 %>
+                      <%= i.text_field :name ,class: "form-control" ,id: "form6Example2"%>
+                      <label class="form-label" for="form6Example2" style="margin-left: 0px;">Mandarat name</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
+                  <% end %>
+                </div>
+              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="">
+                Close
+              </button>
+              <%= f.submit "投稿",class: "btn btn-primary" %>
+            </div>
+        <% end %>
+      <% end %>
       </div>
     </div>
   </div>

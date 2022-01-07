@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :mandarats
   resources :targets
 
-
   namespace :api do
     namespace :v1 do
       # delete '/todos/destroy_all', to: 'todos#destroy_all'
