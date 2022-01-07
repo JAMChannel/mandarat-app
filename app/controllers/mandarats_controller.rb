@@ -1,13 +1,13 @@
 class MandaratsController < ApplicationController
   before_action :require_login, only: %i[index show new create edit update destroy]
   def index
-    # if current_user.mandarats == true
+    if current_user.mandarats.exists?
         @mandarat = current_user.mandarats
         @title = current_user.mandarat_title
         @target = Form::TargetCollection.new
-    # else
-      # redirect_to new_mandarat_path
-    # end
+    else
+      redirect_to new_mandarat_path
+    end
   end
 
   def new
@@ -20,7 +20,7 @@ class MandaratsController < ApplicationController
     if @mandarat.save
       redirect_to mandarats_path
     else
-      render 'new'
+      redirect_to new_mandarat_path
     end
   end
 
@@ -31,7 +31,7 @@ class MandaratsController < ApplicationController
 
   def edit
   end
-  
+
   private
 
   def mandarat_params

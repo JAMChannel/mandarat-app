@@ -1,7 +1,9 @@
-<div class="mandarat"></div>
+
+<div class="mandarat">
   <div class="mandarat-main">
+  
     <section class="pb-4">
-        <div class=" border">
+        <div>
         <section class="w-100 p-4 text-center">
           <table class="table table-borderless">
             <thead>
@@ -57,6 +59,7 @@
                     data-mdb-target="#staticBackdrop3" style="">
                     <%= @mandarat[3].name %>
                     <% @item3 = @mandarat[3].id%>
+                    <%# binding.pry %>
                   </button>
                   <%= render 'template/modalmandaratnew3'%>
                 </td>
@@ -126,6 +129,7 @@
           </button>
             <%= render 'template/modallsideber'%>
         </div>
+        
         </div>
     </section>
   </div>
