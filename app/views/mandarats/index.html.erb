@@ -12,58 +12,107 @@
             <tbody>
               <tr>
                 <td>
-                <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    item="@mandarat[0].id"
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
                     <%= @mandarat[0].name %>
-                </div>
+                    <% @item = @mandarat[0].id%>
+                  </button>
+                    <%= render 'template/modalmandaratnew', target: @target%>
+
+                <%# end %>
                 </td>
                 <!-- <th scope="row">1</th> -->
                 <td>
-                  <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop1" style="">
                     <%= @mandarat[1].name %>
-                  </div>
+                    <% @item1 = @mandarat[1].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew1', target: @target%>
                 </td>
                 <td>
-                  <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop2" style="">
                     <%= @mandarat[2].name %>
-                  </div>
+                    <% @item2 = @mandarat[2].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew2', target: @target%>
                 </td>
               </tr>
               <tr>
                 <!-- <th scope="row">2</th> -->
                 <td>
-                  <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop3" style="">
                     <%= @mandarat[3].name %>
-                  </div>
+                    <% @item3 = @mandarat[3].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew3', target: @target%>
                 </td>
                 <td>
-                  <div class="mandarat-main-button">
+                  <div class="mandarat-main-button"> 
                     <%= @title.title %>
                   </div>
                   </td>
                 <td>
-                  <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop4" style="">
                     <%= @mandarat[4].name %>
-                  </div>
+                    <% @item4 = @mandarat[4].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew4', target: @target%>
                 </td>
               </tr>
               <tr>
                 <!-- <th scope="row">3</th> -->
                 <td>
-                <div>
-                  <div class="mandarat-main-button">
-                    <%= @mandarat[4].name %>
-                  </div>
-                </div>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop5" style="">
+                    <%= @mandarat[5].name %>
+                    <% @item5 = @mandarat[5].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew5', target: @target%>
                 </td>
                 <td>
-                  <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop6" style="">
                     <%= @mandarat[6].name %>
-                  </div>
+                    <% @item6 = @mandarat[6].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew6', target: @target%>
                 </td>
                 <td>
-                <div class="mandarat-main-button">
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop7" style="">
                   <%= @mandarat[7].name %>
-                </div>
+                  <% @item7 = @mandarat[7].id%>
+                </button>
+                <%= render 'template/modalmandaratnew7', target: @target%>
                 </td>
               </tr>
             </tbody>

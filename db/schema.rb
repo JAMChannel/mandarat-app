@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_122431) do
+ActiveRecord::Schema.define(version: 2022_01_06_062919) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -73,6 +73,16 @@ ActiveRecord::Schema.define(version: 2022_01_03_122431) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.bigint "user_id"
+    t.bigint "mandarat_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mandarat_id"], name: "index_targets_on_mandarat_id"
+    t.index ["user_id"], name: "index_targets_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -89,4 +99,6 @@ ActiveRecord::Schema.define(version: 2022_01_03_122431) do
   add_foreign_key "mandarats", "users"
   add_foreign_key "portfolio_tags", "portfolios"
   add_foreign_key "portfolio_tags", "tags"
+  add_foreign_key "targets", "mandarats"
+  add_foreign_key "targets", "users"
 end

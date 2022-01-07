@@ -4,6 +4,7 @@ class MandaratsController < ApplicationController
     # if current_user.mandarats == true
         @mandarat = current_user.mandarats
         @title = current_user.mandarat_title
+        @target = Form::TargetCollection.new
     # else
       # redirect_to new_mandarat_path
     # end
