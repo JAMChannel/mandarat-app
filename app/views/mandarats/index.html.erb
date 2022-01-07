@@ -1,4 +1,139 @@
- <%#= render 'template/header' %>
- <%= link_to 'ログアウト', logout_path, method: :delete %>
-<h1>Mandarats#index</h1>
-<p>Find me in app/views/mandarats/index.html.erb</p>
+
+<div class="mandarat">
+  <div class="mandarat-main">
+  
+    <section class="pb-4">
+        <div>
+        <section class="w-100 p-4 text-center">
+          <table class="table table-borderless">
+            <thead>
+
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button 
+                    type="button" 
+                    item="@mandarat[0].id"
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                    <%= @mandarat[0].name %>
+                    <% @item = @mandarat[0].id%>
+                  </button>
+                    <%= render 'template/modalmandaratnew'%>
+
+                <%# end %>
+                </td>
+                <!-- <th scope="row">1</th> -->
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop1" style="">
+                    <%= @mandarat[1].name %>
+                    <% @item1 = @mandarat[1].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew1'%>
+                </td>
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop2" style="">
+                    <%= @mandarat[2].name %>
+                    <% @item2 = @mandarat[2].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew2'%>
+                </td>
+              </tr>
+              <tr>
+                <!-- <th scope="row">2</th> -->
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop3" style="">
+                    <%= @mandarat[3].name %>
+                    <% @item3 = @mandarat[3].id%>
+                    <%# binding.pry %>
+                  </button>
+                  <%= render 'template/modalmandaratnew3'%>
+                </td>
+                <td>
+                  <div class="mandarat-main-button"> 
+                    <%= @title.title %>
+                  </div>
+                  </td>
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop4" style="">
+                    <%= @mandarat[4].name %>
+                    <% @item4 = @mandarat[4].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew4'%>
+                </td>
+              </tr>
+              <tr>
+                <!-- <th scope="row">3</th> -->
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop5" style="">
+                    <%= @mandarat[5].name %>
+                    <% @item5 = @mandarat[5].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew5'%>
+                </td>
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop6" style="">
+                    <%= @mandarat[6].name %>
+                    <% @item6 = @mandarat[6].id%>
+                  </button>
+                  <%= render 'template/modalmandaratnew6'%>
+                </td>
+                <td>
+                  <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop7" style="">
+                  <%= @mandarat[7].name %>
+                  <% @item7 = @mandarat[7].id%>
+                </button>
+                <%= render 'template/modalmandaratnew7'%>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div class="p-4 text-center">
+          <%= link_to logout_path, method: :delete, data: {confirm: "ログアウトしますか？"} ,class:"btn btn-link px-3",style:"color: black;"  do %>
+            <i class="fas fa-code me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">ログアウト</span>
+          <% end %>
+          <button  class="drawer-toggle btn btn-link px-3" style="color: black;">
+            <i class="fas fa-bars me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">navbar</span>
+          </button>
+            <%= render 'template/modallsideber'%>
+        </div>
+        
+        </div>
+    </section>
+  </div>
+  <div class="mandarat-font">
+    <canvas id="myCanvas"></canvas>
+  </div>
+</div>
