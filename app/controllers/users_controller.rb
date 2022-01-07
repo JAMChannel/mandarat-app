@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def create
     # binding.pry
     @user = User.new(user_params)
@@ -10,7 +9,7 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'ユーザーの作成に失敗しました'
       @user = User.new
       # render root_path
-       redirect_to partial: 'template/modallogin' , locals: { user: @user}
+      redirect_to partial: 'template/modallogin', locals: { user: @user }
     end
   end
 

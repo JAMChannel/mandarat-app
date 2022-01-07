@@ -7,7 +7,7 @@ class Form::TargetCollection
   def initialize(attributes = {})
     # binding.pry
     super attributes
-    self.targets = DEFAULT_ITEM_COUNT.times.map { Target.new } unless self.targets.present?
+    self.targets = DEFAULT_ITEM_COUNT.times.map { Target.new } unless targets.present?
   end
 
   def targets_attributes=(attributes)
@@ -21,10 +21,10 @@ class Form::TargetCollection
   def save
     Target.transaction do
       # binding.pry
-      self.targets.map(&:save!)
+      targets.map(&:save!)
     end
-      return true
-    rescue => e
-      return false
+    true
+      rescue => e
+    false
   end
 end

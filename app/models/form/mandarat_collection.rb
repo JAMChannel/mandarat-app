@@ -12,35 +12,34 @@ class Form::MandaratCollection
   def initialize(attributes = {})
     # binding.pry
     super attributes
-    self.mandarats = DEFAULT_ITEM_COUNT.times.map { Mandarat.new } unless self.mandarats.present?
+    self.mandarats = DEFAULT_ITEM_COUNT.times.map { Mandarat.new } unless mandarats.present?
   end
 
-  def logintext
-  end
-  
+  def logintext; end
+
   # 上でsuper attributesとしているので必要
-    def mandarats_attributes=(attributes)
+  def mandarats_attributes=(attributes)
+    # binding.pry
+    self.mandarats = attributes.map do |_, mandarats_attributes|
+      Mandarat.new(mandarats_attributes)
       # binding.pry
-      self.mandarats = attributes.map do |_, mandarats_attributes|
-        Mandarat.new(mandarats_attributes)
-        # binding.pry
-      end
+    end
+  end
+
+  def save
+    # 実際にやりたいことはこれだけ
+    # self.mandarats.map(&:save!)
+    ActiveRecord::Base.transaction do
+      MandaratTitle.create(title: title, user_id: user_id)
     end
 
-    def save
-      # 実際にやりたいことはこれだけ
-      # self.mandarats.map(&:save!)
-      ActiveRecord::Base.transaction do
-        MandaratTitle.create(title: title,user_id: user_id)
-      end
-  
-      # 複数件全て保存できた場合のみ実行したいので、transactionを使用する
-      Mandarat.transaction do
-        # binding.pry
-        self.mandarats.map(&:save!)
-      end
-        return true
-      rescue => e
-        return false
+    # 複数件全て保存できた場合のみ実行したいので、transactionを使用する
+    Mandarat.transaction do
+      # binding.pry
+      mandarats.map(&:save!)
     end
+    true
+      rescue => e
+    false
+  end
 end

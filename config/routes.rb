@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  
-  root "homes#index"
-
+  root 'homes#index'
 
   resources :users
   get 'login', to: 'user_sessions#new'
@@ -17,5 +15,4 @@ Rails.application.routes.draw do
       resources :portfolios
     end
   end
-
 end
