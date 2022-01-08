@@ -2,9 +2,9 @@ class MandaratsController < ApplicationController
   before_action :require_login, only: %i[index show new create edit update destroy]
   def index
     if current_user.mandarats.exists?
-        @mandarat = current_user.mandarats
-        @title = current_user.mandarat_title
-        @target = Form::TargetCollection.new
+      @mandarat = current_user.mandarats
+      @title = current_user.mandarat_title
+      @target = Form::TargetCollection.new
     else
       redirect_to new_mandarat_path
     end
@@ -29,13 +29,11 @@ class MandaratsController < ApplicationController
     @target = @mandarat.targets
   end
 
-  def edit
-  end
+  def edit; end
 
   private
 
   def mandarat_params
-    params.require(:form_mandarat_collection).permit(:title, :user_id, mandarats_attributes: [:name,:user_id])
+    params.require(:form_mandarat_collection).permit(:title, :user_id, mandarats_attributes: %i[name user_id])
   end
-
 end

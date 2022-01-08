@@ -10,7 +10,7 @@ module MandaratApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-    
+
     config.generators do |g|
       # css,jsのファイルは作成せず
       g.assets false
