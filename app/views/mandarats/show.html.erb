@@ -1,8 +1,100 @@
-
-  <button type="button" class="drawer-toggle">Drawer toggle</button>
-
-  <%= render 'template/modallsideber'%>
-
-
-
-
+<div class="mandarat">
+  <div class="mandarat-main">
+    <section class="pb-4">
+      <section class="w-100 p-4 text-center">
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[0].name %>
+                </button>
+              </td>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[1].name %>
+                </button>
+              </td>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[2].name %>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[3].name %>
+                </button>
+              </td>
+              <td>
+                <%= link_to mandarats_path  do %>
+                  <div class="mandarat-main-button">
+                    <%= @mandarat.name %>
+                  </div>
+                <% end %>
+              </td>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[4].name %>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[5].name %>
+                </button>
+              </td>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[6].name %>
+                </button>
+              </td>
+              <td>
+                <button 
+                    type="button" 
+                    class="mandarat-main-button" 
+                    data-mdb-toggle="modal" 
+                    data-mdb-target="#staticBackdrop" style="">
+                  <%= @target[7].name %>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </div>
+  <div class="mandarat-font">
+    <canvas id="myCanvas"></canvas>
+  </div>
+</div>
