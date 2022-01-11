@@ -81,3 +81,9 @@ gem 'aws-sdk-s3', require: false
 
 # ログイン機能
 gem 'sorcery'
+
+#  Slack API
+gem 'slack-ruby-client'
+
+# .env
+gem 'dotenv-rails'
