@@ -1,6 +1,11 @@
 class InfosController < ApplicationController
+  before_action :require_login, only: %i[ new create ]
   def new
-    # binding.pry
+    client = Slack::Web::Client.new
+    client.chat_postMessage(
+      channel: '#test',
+      text: 'http://localhost:3000/infos/new'
+    )
     if current_user.mandarats[0].infos.count == current_user.mandarats[1].infos.count && current_user.mandarats[0].infos.count == current_user.mandarats[7].infos.count
       @mandarats = current_user.mandarats[0]
       @info = Info.new

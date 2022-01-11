@@ -85,5 +85,4 @@ gem 'sorcery'
 #  Slack API
 gem 'slack-ruby-client'
 
-# .env
-gem 'dotenv-rails'
+
