@@ -85,4 +85,7 @@ gem 'sorcery'
 #  Slack API
 gem 'slack-ruby-client'
 
+# 定期実装
+gem 'whenever', require: false
+
 
