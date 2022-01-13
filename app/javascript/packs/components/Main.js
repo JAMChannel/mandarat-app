@@ -56,7 +56,7 @@ to{
 const BLOG = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
-  top: 25%;
+  top: 40%;
   right: calc(1rem + 2vw);
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
@@ -158,7 +158,7 @@ const Main = () => {
             Blog
           </motion.h2>
         </BLOG>
-        <TORERO to="/torero">
+        {/* <TORERO to="/torero">
           <motion.h2
             initial={{
               y: -200,
@@ -173,7 +173,7 @@ const Main = () => {
           >
             Torero
           </motion.h2>
-        </TORERO>
+        </TORERO> */}
         <WORK to="/work" click={+click}>
           <motion.h2
             initial={{
@@ -187,7 +187,7 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Work
+            PortFolio
           </motion.h2>
         </WORK>
         <BigTitle text="JamChannel" top="10%" left="5%" />
