@@ -7,8 +7,8 @@ class UserSessionsController < ApplicationController
       redirect_back_or_to mandarats_path, success: 'ログインしました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
-      # render :new
-      redirect_back(fallback_location: root_path)
+      render :new
+      # redirect_back(fallback_location: root_path)
       # @user = User.new
       # render("homes/index")
       # render location: root_path, locals: { user: @user }

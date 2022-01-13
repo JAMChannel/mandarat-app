@@ -27,5 +27,29 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Info < ApplicationRecord
+  require 'slack-ruby-client'
+
+
   belongs_to :mandarat
+  def self.slack
+
+    # puts "test"
+
+    # Slack.configure do |config|
+    #   config.token = ENV['SLACK_API_TOKEN']
+    # end
+    # client = Slack::Web::Client.new
+    # channel = '#test'
+    # text = 'http://localhost:3000/infos/new'
+
+    # response = client.chat_postMessage(token: ENV['SLACK_API_TOKEN'],channel: channel, text: text)
+
+    client = Slack::Web::Client.new
+    client.chat_postMessage(
+      token: ENV['SLACK_API_TOKEN'],
+      channel: '#test',
+      text: 'http://localhost:3000/infos/new'
+    )
+
+  end
 end

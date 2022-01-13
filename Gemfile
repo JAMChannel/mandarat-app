@@ -81,3 +81,11 @@ gem 'aws-sdk-s3', require: false
 
 # ログイン機能
 gem 'sorcery'
+
+#  Slack API
+gem 'slack-ruby-client'
+
+# 定期実装
+gem 'whenever', require: false
+
+
