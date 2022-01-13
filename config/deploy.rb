@@ -5,6 +5,10 @@ lock '3.16.0'
 set :application, 'mandarat-app'
 
 set :branch, 'main'
+set :whenever_roles,        ->{ :app }
+# set :whenever_roles, 'batch'
+# set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+# set :whenever_command, -> { ["RAILS_ENV=#{fetch(:stage)}", :bundle, :exec, :whenever] } # これを追加
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url, 'git@github.com:JAMChannel/mandarat-app.git'
