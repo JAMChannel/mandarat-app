@@ -8,15 +8,15 @@
 <% info8 = mandarat.infos.where(solved8: 1).count%>
 <% infos = info1 + info2 + info3 + info4 + info5 + info6 + info7 + info8 %>
 <% @total = ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
+
 <div>
-  <span class="chart" data-percent="80">
-    WordPress
-  </span>
-  <div class="chart">
-    <div class="percentage" data-percent="46">
-      <span>46</span><sup>%</sup>
-    </div>
-    <div class="label">Bounce rate</div>
+  <div>
+  <%= @total %>
+  </div>
+  <div>
+  <%#= pie_chart [['赤', 50], ['青', 50]]%>
+
+  <%= line_chart [[ mandarat.infos.select(:created_at).count],[@mandarat[0].infos.count]] %>
   </div>
   <%#= ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
 </div>
@@ -28,4 +28,6 @@
     <%= link_to "詳細", mandarat_path(mandarat),class: "btn btn-primary" %>
   </div>
 </div>
-<script></script>
+<script>
+
+</script>
