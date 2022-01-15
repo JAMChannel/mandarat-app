@@ -1,0 +1,31 @@
+<% info1 = mandarat.infos.where(solved1: 1).count%>
+<% info2 = mandarat.infos.where(solved2: 1).count%>
+<% info3 = mandarat.infos.where(solved3: 1).count%>
+<% info4 = mandarat.infos.where(solved4: 1).count%>
+<% info5 = mandarat.infos.where(solved5: 1).count%>
+<% info6 = mandarat.infos.where(solved6: 1).count%>
+<% info7 = mandarat.infos.where(solved7: 1).count%>
+<% info8 = mandarat.infos.where(solved8: 1).count%>
+<% infos = info1 + info2 + info3 + info4 + info5 + info6 + info7 + info8 %>
+<% @total = ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
+<div>
+  <span class="chart" data-percent="80">
+    WordPress
+  </span>
+  <div class="chart">
+    <div class="percentage" data-percent="46">
+      <span>46</span><sup>%</sup>
+    </div>
+    <div class="label">Bounce rate</div>
+  </div>
+  <%#= ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
+</div>
+<div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="">
+      Close
+    </button>
+    <%= link_to "詳細", mandarat_path(mandarat),class: "btn btn-primary" %>
+  </div>
+</div>
+<script></script>

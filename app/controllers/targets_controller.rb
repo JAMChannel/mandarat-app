@@ -1,5 +1,17 @@
 class TargetsController < ApplicationController
-  def index; end
+  def index
+    @mandarat = current_user.mandarats
+    @targets = @mandarat[0].infos
+    # @infos = :solved1..:solved8
+    # @infos.map { |c| @targets.send(c) }.sum
+    # binding.pry
+    @item = []
+    @targets.each do |target|
+      # @item << target.where(solved1: true)
+    end
+    # binding.pry
+
+  end
 
   def new; end
 

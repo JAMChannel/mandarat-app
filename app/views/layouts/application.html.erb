@@ -6,34 +6,21 @@
     <title>MandaratApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Pacifico&family=Source+Sans+Pro:wght@400;600;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
-    
-   <script src="https://unpkg.com/three@0.131.3/build/three.min.js"></script>
-
-  
-
-
-
-    <%= stylesheet_link_tag 'application', media: 'all' %> 
+    <script src="https://unpkg.com/three@0.131.3/build/three.min.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
-
     <%#= javascript_pack_tag 'index' %>
   </head>
   <body>
     <%#= render 'template/header' %>
-    
-
     <%= yield %>
     <footer class="text-center text-white fixed-bottom">
       <div class="container p-4 pb-0">
@@ -70,4 +57,3 @@
     </footer>
   </body>
 </html>
-
