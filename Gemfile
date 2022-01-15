@@ -88,4 +88,7 @@ gem 'slack-ruby-client'
 # 定期実装
 gem 'whenever', require: false
 
+# チャート機能実装
+gem 'chartkick'
+
 
