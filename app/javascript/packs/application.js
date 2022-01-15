@@ -8,11 +8,10 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('jquery')
-// require('popper')
-// require('bootstrap')
-
-// import 'bootstrap';
 require("./three1.js")
+require("chartkick")
+require("chart.js")
+
 
 
 
