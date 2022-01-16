@@ -9,16 +9,26 @@
 <% infos = info1 + info2 + info3 + info4 + info5 + info6 + info7 + info8 %>
 <% @total = ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
 
+<% @hako = mandarat.infos.select(:created_at,:ave)%>
+<% @charts = @hako.pluck(:created_at, :ave) %>
+
+<% @charts.each do |chart| %>
+  <% chart.each do |n| %>
+    <% if chart[0] == n %>
+    <% chart[0] = n.strftime("%Y-%m-%d")%>
+    <% end %>
+  <% end %>
+<% end %>
+
 <div>
   <div>
   <%= @total %>
+  <%#= pie_chart 30, donut: true , suffix: "%"%>
   </div>
   <div>
   <%#= pie_chart [['赤', 50], ['青', 50]]%>
-
-  <%= line_chart [[ mandarat.infos.select(:created_at).count],[@mandarat[0].infos.count]] %>
+  <%= line_chart @charts, xtitle: "Time" %>  <!-- , discrete: true , curve: false-->
   </div>
-  <%#= ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
 </div>
 <div>
   <div class="modal-footer">
