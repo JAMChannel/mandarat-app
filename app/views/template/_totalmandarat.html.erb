@@ -8,26 +8,25 @@
 <% info8 = mandarat.infos.where(solved8: 1).count%>
 <% infos = info1 + info2 + info3 + info4 + info5 + info6 + info7 + info8 %>
 <% @total = ((infos.to_f / (mandarat.infos.count * 8).to_f) * 100).round(1)%>
-
 <% @hako = mandarat.infos.select(:created_at,:ave)%>
 <% @charts = @hako.pluck(:created_at, :ave) %>
-
 <% @charts.each do |chart| %>
   <% chart.each do |n| %>
     <% if chart[0] == n %>
-    <% chart[0] = n.strftime("%Y-%m-%d")%>
+      <% chart[0] = n.strftime("%Y-%m-%d")%>
     <% end %>
   <% end %>
 <% end %>
-
 <div>
-  <div>
-  <%= @total %>
-  <%#= pie_chart 30, donut: true , suffix: "%"%>
+  <div class="chart">
+    <div class="percentage" data-percent="<%= @total %>">
+      <span><%= @total %></span><sup>%</sup>
+    </div>
+    <div class="chart-ave">Total Ave</div>
   </div>
   <div>
-  <%#= pie_chart [['赤', 50], ['青', 50]]%>
-  <%= line_chart @charts, xtitle: "Time" %>  <!-- , discrete: true , curve: false-->
+    <%#= pie_chart [['赤', 50], ['青', 50]]%>
+    <%= line_chart @charts.last(7), xtitle: "Average 7 times" %>  <!-- , discrete: true , curve: false-->
   </div>
 </div>
 <div>
@@ -38,6 +37,16 @@
     <%= link_to "詳細", mandarat_path(mandarat),class: "btn btn-primary" %>
   </div>
 </div>
+<script src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
 <script>
-
+  $('.percentage').easyPieChart({
+    animate: 1000,
+    lineWidth: 4,
+    onStep: function(value) {
+      this.$el.find('span').text(Math.round(value));
+    },
+    onStop: function(value, to) {
+      this.$el.find('span').text(Math.round(to));
+    }
+  });
 </script>

@@ -43,5 +43,39 @@ footer{
   padding-top: 5%;
 }
 
+.chart{
+  display: inline-block;
+  width: 110px;
+  margin: 40px auto 20px;
+  padding: 0 10px;
+  &-ave{
+    font-weight: 400;
+    margin-left: 19px;
+  }
+}
+.easyPieChart {
+  position: relative;
+  text-align: center;
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.percentage,
+.label {
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-weight: 100;
+}
+.percentage{
+  font-size: 17px;
+  sup{
+    top: -0.2em;
+    margin-left: 1px;
+  }
+}
+
+
 
 
