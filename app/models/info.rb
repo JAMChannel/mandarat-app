@@ -32,6 +32,7 @@ class Info < ApplicationRecord
 
 
   belongs_to :mandarat
+  belongs_to :user
   def self.slack
 
     # puts "test"

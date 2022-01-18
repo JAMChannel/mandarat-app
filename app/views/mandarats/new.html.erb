@@ -1,75 +1,139 @@
-<div class="area" >
-  <ul class="circles">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <div class="modal fade show" id="exampleCentralModal4" tabindex="-1" aria-labelledby="exampleModalLabel" data-gtm-vis-first-on-screen-2340190_1302="1053638" data-gtm-vis-total-visible-time-2340190_1302="100" data-gtm-vis-has-fired-2340190_1302="1" style="display: block;" aria-modal="true" role="dialog">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Mndarat form</h5>
-        </div>
-        <div class="modal-body p-4">
-          <%= form_with model:@mandarat, url:mandarats_path, local:true do |f| %>
-            <div class="form-outline mb-4">
-              <%= f.text_field :title ,class: "form-control" ,id: "form6Example"%>
-              <%= f.hidden_field :user_id, :value => current_user.id %>
-              <label class="form-label" for="form6Example" style="margin-left: 0px;">Title</label>
-              <div class="form-notch">
-                <div class="form-notch-leading" style="width: 9px;"></div>
-                <div class="form-notch-middle" style="width: 97.6px;"></div>
-                <div class="form-notch-trailing"></div>
-              </div>
+
+<div id="particles-js"></div>
+<div class="modal fade show" id="exampleCentralModal4" tabindex="-1" aria-labelledby="exampleModalLabel" data-gtm-vis-first-on-screen-2340190_1302="1053638" data-gtm-vis-total-visible-time-2340190_1302="100" data-gtm-vis-has-fired-2340190_1302="1" style="display: block;" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mndarat form</h5>
+      </div>
+      <div class="modal-body p-4">
+        <%= form_with model:@mandarat, url:mandarats_path, local:true do |f| %>
+          <div class="form-outline mb-4">
+            <%= f.text_field :title ,class: "form-control" ,id: "form6Example"%>
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+            <label class="form-label" for="form6Example" style="margin-left: 0px;">Title</label>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px;"></div>
+              <div class="form-notch-middle" style="width: 97.6px;"></div>
+              <div class="form-notch-trailing"></div>
             </div>
-            <div class="row mb-4">
-              <div class="col">
-                <%= f.fields_for :mandarats do |i| %>
-                  <div class="form-outline form-new-text">
-                    <%= i.hidden_field :user_id, :value => current_user.id %>
-                    <%= i.hidden_field :title_id, :value => current_user.id %>
-                    <%= i.text_field :name ,class: "form-control" ,id: "form6Example1"%>
-                    <label class="form-label" for="form6Example1" style="margin-left: 0px;">Mandarat name</label>
-                    <div class="form-notch">
-                      <div class="form-notch-leading" style="width: 9px;"></div>
-                      <div class="form-notch-middle" style="width: 68.8px;"></div>
-                      <div class="form-notch-trailing"></div>
-                    </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <%= f.fields_for :mandarats do |i| %>
+                <div class="form-outline form-new-text">
+                  <%= i.hidden_field :user_id, :value => current_user.id %>
+                  <%= i.hidden_field :title_id, :value => current_user.id %>
+                  <%= i.text_field :name ,class: "form-control" ,id: "form6Example1"%>
+                  <label class="form-label" for="form6Example1" style="margin-left: 0px;">Mandarat name</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 68.8px;"></div>
+                    <div class="form-notch-trailing"></div>
                   </div>
-                <% end %>
-              </div>
-              <div class="col">
-                <%= f.fields_for :mandarats do |i| %>
-                  <div class="form-outline form-new-text">
-                    <%= i.hidden_field :user_id, :value => current_user.id %>
-                    <%= i.hidden_field :title_id, :value => current_user.id %>
-                    <%= i.text_field :name ,class: "form-control" ,id: "form6Example2"%>
-                    <label class="form-label" for="form6Example2" style="margin-left: 0px;">Mandarat name</label>
-                    <div class="form-notch">
-                      <div class="form-notch-leading" style="width: 9px;"></div>
-                      <div class="form-notch-middle" style="width: 68px;"></div>
-                      <div class="form-notch-trailing"></div>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <%= link_to logout_path, method: :delete, data: {confirm: "ログアウトしますか？"} ,class:"btn btn-secondary",style:"color: black;"  do %>
-                <i class="fas fa-code me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">ログアウト</span>
+                </div>
               <% end %>
-              <%= f.submit "投稿",class: "btn btn-primary" %>
             </div>
-          <% end %>
-        </div>
+            <div class="col">
+              <%= f.fields_for :mandarats do |i| %>
+                <div class="form-outline form-new-text">
+                  <%= i.hidden_field :user_id, :value => current_user.id %>
+                  <%= i.hidden_field :title_id, :value => current_user.id %>
+                  <%= i.text_field :name ,class: "form-control" ,id: "form6Example2"%>
+                  <label class="form-label" for="form6Example2" style="margin-left: 0px;">Mandarat name</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 68px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <%= link_to logout_path, method: :delete, data: {confirm: "ログアウトしますか？"} ,class:"btn btn-secondary",style:"color: black;"  do %>
+              <i class="fas fa-code me-md-2"></i><span class="d-none d-md-inline-block export-to-snippet pe-none">ログアウト</span>
+            <% end %>
+            <%= f.submit "投稿",class: "btn btn-primary" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-7/js/5-7.js"></script>
+
+<script>
+particlesJS("particles-js",{
+  "particles":{
+    "number":{
+      "value":50,//この数値を変更するとホタルの数が増減できる
+      "density":{
+        "enable":true,
+        "value_area":1602.3971861905397
+      }
+    },
+    "color":{
+      "value":"#f3fa8b"//色
+    },
+    "shape":{
+      "type":"circle",//形状はcircleを指定
+      "stroke":{
+        "width":0,
+      }
+    },
+    "opacity":{
+      "value":1,
+      "random":true,//透過をランダムに
+      "anim":{
+        "enable":false,
+        "speed":1.10115236356258881,
+        "opacity_min":0,
+        "sync":false
+      }
+    },
+    "size":{
+      "value":4.005992965476349,
+      "random":true,//サイズをランダムに
+      "anim":{
+        "enable":true,
+        "speed":24.345709068776642,
+        "size_min":0.1,
+        "sync":false
+      }
+    },
+    "line_linked":{
+      "enable":false,
+    },
+    "move":{
+      "enable":true,
+      "speed":6,//この数値を小さくするとゆっくりな動きになる
+      "direction":"none",//方向指定なし
+      "random":true,//動きはランダムに
+      "straight":false,//動きをとどめない
+      "out_mode":"out",//画面の外に出るように描写
+      "bounce":false,//跳ね返りなし
+      "attract":{
+        "enable":false,
+        "rotateX":600,
+        "rotateY":600
+      }
+    }
+  },
+  "interactivity":{
+    "detect_on":"canvas",
+    "events":{
+      "onhover":{
+        "enable":false
+      },
+      "onclick":{
+        "enable":false
+      },
+      "resize":true
+    }
+  },
+  "retina_detect":true
+});
+</script>

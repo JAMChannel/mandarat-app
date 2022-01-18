@@ -6,8 +6,49 @@
   tabindex="-1"
   aria-labelledby="staticBackdropLabel"
   aria-hidden="true" >
-
   <div class="modal-dialog">
+    <% if logged_in? %>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"><%= current_user.username %></h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%# binding.pry %>
+          <% @ave = current_user.infos.average(:ave).round(1).to_f %>
+          <% @items = current_user.infos.select(:created_at,:ave) %>
+          <% @charts = @items.pluck(:created_at, :ave)%>
+          <% @charts.each do |chart| %>
+            <% chart.each do |n| %>
+              <% if chart[0] == n %>
+                <% chart[0] = n.strftime("%Y-%m-%d")%>
+              <% end %>
+            <% end %>
+          <% end %>
+          <div>
+          <%# binding.pry %>
+            <div class="chart">
+              <div class="percentage" data-percent="<%= @ave %>">
+                <span><%= @ave %></span><sup>%</sup>
+              </div>
+              <div class="chart-ave">Total Ave</div>
+            </div>
+            <div>
+              <%#= pie_chart [['赤', 50], ['青', 50]]%>
+              <%= line_chart @charts.last(7), xtitle: "Average 7 times" %>  <!-- , discrete: true , curve: false-->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="">
+            Close
+          </button>
+          <%= link_to "ログアウト" ,logout_path, method: :delete, data: {confirm: "ログアウトしますか？"} ,class:"btn btn-secondary"  %>
+          <%= link_to "GO", mandarats_path,class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% else %>
     <div class="modal-content">
       <div class="modal-body">
         <ul class="nav nav-pills nav-justified mb-3">
@@ -33,5 +74,19 @@
         </button>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
+</div>
+<script src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+<script>
+  $('.percentage').easyPieChart({
+    animate: 1000,
+    lineWidth: 4,
+    onStep: function(value) {
+      this.$el.find('span').text(Math.round(value));
+    },
+    onStop: function(value, to) {
+      this.$el.find('span').text(Math.round(to));
+    }
+  });
+</script>
