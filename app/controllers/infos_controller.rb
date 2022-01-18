@@ -42,7 +42,36 @@ class InfosController < ApplicationController
   end
 
   def create
+    @count = []
+    # @ave = ((@count.count.to_f / 8) * 100).round(1)
     @info = Info.new(info_params)
+
+    if @info.solved1 == true
+      @count << @info.solved1
+    end
+    if @info.solved2 == true
+      @count << @info.solved2
+    end
+    if @info.solved3 == true
+      @count << @info.solved3
+    end
+    if @info.solved4 == true
+      @count << @info.solved4
+    end
+    if @info.solved5 == true
+      @count << @info.solved5
+    end
+    if @info.solved6 == true
+      @count << @info.solved6
+    end
+    if @info.solved7 == true
+      @count << @info.solved7
+    end
+    if @info.solved8 == true
+      @count << @info.solved8
+    end
+    @info.ave = ((@count.count.to_f / 8) * 100).round(1)
+    # binding.pry
     if @info.save
       redirect_to root_path
     else

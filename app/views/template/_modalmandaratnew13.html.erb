@@ -1,0 +1,53 @@
+<div 
+  class="modal fade" 
+  id="staticBackdrop13" 
+  data-mdb-backdrop="static" 
+  data-mdb-keyboard="false" 
+  tabindex="-1" 
+  aria-labelledby="staticBackdrop13Label" 
+  style="display: none;" 
+  data-gtm-vis-first-on-screen-2340190_1302="98715" 
+  data-gtm-vis-total-visible-time-2340190_1302="100" 
+  data-gtm-vis-has-fired-2340190_1302="1" 
+  aria-modal="true"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"><%= @mandarat.targets[5].name %></h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%# binding.pry %>
+        <% @solve = @mandarat.infos.where(solved6: 1).count %>
+        <% @count = @mandarat.infos.count %>
+        <% @total = ((@solve.to_f / @count.to_f) * 100).round(1) %>
+        <div class="chart">
+          <div class="percentage" data-percent="<%= @total %>">
+            <span><%= @total %></span><sup>%</sup>
+          </div>
+          <div class="chart-ave">Total Ave</div>
+        </div>
+        <%#= render 'template/totalmandarat',mandarat:@mandarat[1] %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+<script>
+  $('.percentage').easyPieChart({
+    animate: 1000,
+    lineWidth: 4,
+    onStep: function(value) {
+      this.$el.find('span').text(Math.round(value));
+    },
+    onStop: function(value, to) {
+      this.$el.find('span').text(Math.round(to));
+    }
+  });
+</script>

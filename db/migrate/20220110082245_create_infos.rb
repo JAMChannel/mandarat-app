@@ -9,6 +9,7 @@ class CreateInfos < ActiveRecord::Migration[6.0]
       t.boolean :solved6, default: false
       t.boolean :solved7, default: false
       t.boolean :solved8, default: false
+      t.float :ave, null: false
       t.references :user, foreign_key: true
       t.references :mandarat, foreign_key: true
       t.timestamps

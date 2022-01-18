@@ -33,16 +33,6 @@ ActiveRecord::Schema.define(version: 2022_01_10_082245) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "currencies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.bigint "max_supply"
-    t.string "currency_symbol"
-    t.string "slug"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.boolean "solved1", default: false
     t.boolean "solved2", default: false
@@ -52,6 +42,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_082245) do
     t.boolean "solved6", default: false
     t.boolean "solved7", default: false
     t.boolean "solved8", default: false
+    t.float "ave", null: false
     t.bigint "user_id"
     t.bigint "mandarat_id"
     t.datetime "created_at", precision: 6, null: false

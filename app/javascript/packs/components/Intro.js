@@ -81,17 +81,18 @@ const Intro = () => {
           <SubBox>
               <Text>
                   <div>
+                      
                   <button
                     type="button"
                     className="btn btn-primary"
                     data-mdb-toggle="modal"
                     data-mdb-target="#staticBackdrop"
                   >
-                    login
+                    Click
                   </button>
                   </div>
-                  <h3>Please login</h3>
-                  <h6>I design and Code simple yet beautiful websites.</h6>
+                  <h3>login?</h3>
+                  <h6>It is an application that creates a mandarat and achieves a goal.</h6>
               </Text>
           </SubBox>
           <SubBox>

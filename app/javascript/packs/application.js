@@ -1,5 +1,6 @@
 import 'bootstrap';
 import 'bootstrap-material-design'
+import "chartkick/chart.js"
 // import * as mdb from 'mdb-ui-kit'; // lib
 // import { Input } from 'mdb-ui-kit'; // module
 // import { Input as CustomInput } from 'mdb-ui-kit'; // module with custom name
@@ -8,11 +9,11 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('jquery')
-// require('popper')
-// require('bootstrap')
-
-// import 'bootstrap';
 require("./three1.js")
+
+// require("chartkick")
+// require("chart.js")
+
 
 
 

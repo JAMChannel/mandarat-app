@@ -3,6 +3,7 @@
 # Table name: infos
 #
 #  id          :bigint           not null, primary key
+#  ave         :float(24)        not null
 #  solved1     :boolean          default(FALSE)
 #  solved2     :boolean          default(FALSE)
 #  solved3     :boolean          default(FALSE)
@@ -31,6 +32,7 @@ class Info < ApplicationRecord
 
 
   belongs_to :mandarat
+  belongs_to :user
   def self.slack
 
     # puts "test"
