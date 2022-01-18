@@ -65,7 +65,7 @@ display: flex;
 justify-content: space-between;
 `
 
-const Link = styled(NavLink)`
+const Link = styled.a`
 background-color: ${props =>props.theme.body};
 color: ${props =>props.theme.text};
 text-decoration: none;
@@ -79,7 +79,7 @@ ${Box}:hover &{
 
 }
 `
-const Git = styled(NavLink)`
+const Git = styled.a`
 color: inherit;
 text-decoration: none;
 ${Box}:hover &{
@@ -106,15 +106,15 @@ const Item = {
 
 const Card = (props) => {
 
-  const {id, name, text, tags, url, github, image} = props.data;
+  const {id, name, text, tags, url, github, image_url} = props.data;
 
   return (
     <Box key={id} variants={Item}>
       <Title>{name}</Title>
       {/* <Description>{text}</Description>  */}
-      {/* <Description>
-      <img key={id} src={image} width={190} height={80}/>
-      </Description> */}
+      <Description>
+      <img className='react-image' src={image_url} width={190} height={80}/>
+      </Description>
       
       <Tags>
         {
@@ -124,10 +124,10 @@ const Card = (props) => {
         }
       </Tags>
       <Footer>
-        <Link to={{pathname: `${url}`}} target="_blank">
-          Go
+        <Link href={url} target="_blank">
+            Go
         </Link>
-        <Git to={{pathname: `${github}`}} target="_blank">
+        <Git href={github} target="_blank">
           <Github width={30} height={30} />
         </Git>
       </Footer>

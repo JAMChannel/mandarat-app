@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'infos/new'
-  root 'homes#index'
+
+root 'homes#index'
+
+  resources :homes, only: [:new,:create]
 
   resources :users
   get 'login', to: 'user_sessions#new'
