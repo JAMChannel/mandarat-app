@@ -91,4 +91,7 @@ gem 'whenever', require: false
 # チャート機能実装
 gem "chartkick"
 
+# メタタグ
+gem 'meta-tags'
+
 
