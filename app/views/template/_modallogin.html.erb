@@ -15,29 +15,33 @@
         </div>
         <div class="modal-body">
           <%# binding.pry %>
-          <% @ave = current_user.infos.average(:ave).round(1).to_f %>
-          <% @items = current_user.infos.select(:created_at,:ave) %>
-          <% @charts = @items.pluck(:created_at, :ave)%>
-          <% @charts.each do |chart| %>
-            <% chart.each do |n| %>
-              <% if chart[0] == n %>
-                <% chart[0] = n.strftime("%Y-%m-%d")%>
+          <% if current_user.infos.present? %>
+            <% @ave = current_user.infos.average(:ave).round(1).to_f %>
+            <% @items = current_user.infos.select(:created_at,:ave) %>
+            <% @charts = @items.pluck(:created_at, :ave)%>
+            <% @charts.each do |chart| %>
+              <% chart.each do |n| %>
+                <% if chart[0] == n %>
+                  <% chart[0] = n.strftime("%Y-%m-%d")%>
+                <% end %>
               <% end %>
             <% end %>
-          <% end %>
-          <div>
-          <%# binding.pry %>
-            <div class="chart">
-              <div class="percentage" data-percent="<%= @ave %>">
-                <span><%= @ave %></span><sup>%</sup>
-              </div>
-              <div class="chart-ave">Total Ave</div>
-            </div>
             <div>
-              <%#= pie_chart [['赤', 50], ['青', 50]]%>
-              <%= line_chart @charts.last(7), xtitle: "Average 7 times" %>  <!-- , discrete: true , curve: false-->
+            <%# binding.pry %>
+              <div class="chart">
+                <div class="percentage" data-percent="<%= @ave %>">
+                  <span><%= @ave %></span><sup>%</sup>
+                </div>
+                <div class="chart-ave">Total Ave</div>
+              </div>
+              <div>
+                <%#= pie_chart [['赤', 50], ['青', 50]]%>
+                <%= line_chart @charts.last(7), xtitle: "Average 7 times" %>  <!-- , discrete: true , curve: false-->
+              </div>
             </div>
-          </div>
+          <%else %>
+            <strong><p class="top-text">※※※ データはまだありません ※※※</p></strong>
+          <% end %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="">

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import PowerButton from "../subComponents/PowerButton";
+// import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import ParticleComponent from '../subComponents/ParticleComponent';
 import logo from "../logo.svg";
@@ -129,7 +129,7 @@ const Main = () => {
     <MainContainer>
       <DarkDiv click={click} />
       <Container>
-        <PowerButton />
+        {/* <PowerButton /> */}
         <SocialIcons theme={click ? "dark" : "light"} />
         <ParticleComponent theme='light' />
         <Center click={click}>
@@ -155,7 +155,7 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Blog
+            Table
           </motion.h2>
         </BLOG>
         {/* <TORERO to="/torero">

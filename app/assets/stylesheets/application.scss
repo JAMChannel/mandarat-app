@@ -9,8 +9,6 @@
 @import 'mandarats-index';
 
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -77,15 +75,35 @@ footer{
 
 
 #particles-js{ 
-  position:fixed;/*描画固定*/
-  z-index:1;/*描画を一番下に*/
+  position:fixed;
+  z-index:1;
   width: 100%;
   height: 100%;
-  background-color:#000;/*背景色*/
+  background-color:#000;
 }
 
 .react-image{
   border: 2px solid;
 }
 
+.timeline-box{
+  padding-bottom: 14vh;
+  background-color: #fbfbe3;
+  .timeline-card-content{
+    width: 34vw;
+  }
+  .card-title{
+    text-align: center;
+  }
+  .card-sub-title{
+    text-align: center;
+  }
+  .timeline-controls{
+    display: none;
+  }
+}
+
+.top-text{
+  text-align: center;
+}
 
