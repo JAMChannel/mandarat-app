@@ -50,7 +50,7 @@ class Info < ApplicationRecord
     client.chat_postMessage(
       token: ENV['SLACK_API_TOKEN'],
       channel: '#test',
-      text: 'http://localhost:3000/infos/new'
+      text: 'https://mandarat.com//infos/new'
     )
 
   end
