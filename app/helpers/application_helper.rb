@@ -18,7 +18,7 @@ module ApplicationHelper
         description: 'Ruby on RailsとReactを組み合わせたの実践的な内容を実施', 
         type: 'website',
         url: request.original_url,
-        image: image_url('image1.png.image_path'),
+        image: image_url('image1.png'),
         locale: 'ja_JP',
       },
       twitter: {
