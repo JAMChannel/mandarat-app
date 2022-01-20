@@ -1,33 +1,24 @@
 module ApplicationHelper
   def default_meta_tags
     {
-      site: 'mandarat.com',
-      title: 'mandarat - portfolioサイト',
+      site: "mandarat.com",
       reverse: true,
-      separator: '|',
-      description: 'Ruby on RailsとReactを組み合わせたの実践的な内容を実施',
-      keywords: 'React',
+      title: 'Mandarat - Rails&Reactアプリケーション',
+      description: "RailsとReact.jsを実装したMandartアプリ",
+      keywords: "マンダラート",
       canonical: request.original_url,
-      # icon: [
-      #   { href: image_url('favicon.ico') },
-      #   { href: image_url('icon.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
-      # ],
-      og: {
-        site_name: 'mandarat.com',
-        title: 'mandarat - Rails&Reactを利用したportfolio',
-        description: 'Ruby on RailsとReactを組み合わせたの実践的な内容を実施', 
-        type: 'website',
+      og: {                 # OGP側
+        title:'Mandarat - Rails&Reactアプリケーション',
+        type: "website",
         url: request.original_url,
-        image: image_url('image1.png'),
-        locale: 'ja_JP',
+        image: image_url("image1.png"),
+        site_name: "mandarat.com",
+        description: "RailsとReact.jsを実装したMandartアプリ",
+        locale: 'ja_JP'
       },
-      twitter: {
-        card: 'summary_large_image',
-        # site: '@ツイッターのアカウント名',
+      twitter: { # Twitter上での表示タイプを指定するタグ
+        card: 'summary_large_image'
       }
-      # fb: {
-      #   app_id: '¥facebookのID'
-      # }
     }
   end
 end
