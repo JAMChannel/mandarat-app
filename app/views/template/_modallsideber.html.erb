@@ -24,7 +24,7 @@
     <% else %>
     <nav class="drawer-nav" role="navigation">
       <ul class="drawer-menu">
-        <li><a class="drawer-brand" href="#">My Menu</a></li>
+        <li><a class="drawer-brand" href="#"><%= current_user.username %></a></li>
         <li><%= link_to "トップページ", root_path, class:"drawer-menu-item" %></li>
         <li><p>***API情報は管理者ログイン***</p></li>
       </ul>
