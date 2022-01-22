@@ -34,7 +34,7 @@ function BlogPage() {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f0693963feafd4fa5de27ed836642c04ad1d1023/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-07-01%2022.03.07.png"
+        url: "http://mandarat.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--da66b591f669ead44e7440ffb4666f48d238aeee/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-01-22%2022.39.08.png"
       }
     }
   },
@@ -47,7 +47,7 @@ function BlogPage() {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f0693963feafd4fa5de27ed836642c04ad1d1023/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-07-01%2022.03.07.png"
+        url: "http://mandarat.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--39a336e3a6968c9d09d63ee17ec4a328b68599c2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-01-22%2022.53.25.png"
 
       }
     }
@@ -61,7 +61,7 @@ function BlogPage() {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f0693963feafd4fa5de27ed836642c04ad1d1023/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-07-01%2022.03.07.png"
+        url: "http://mandarat.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb0148c35a317dabd5df9f4b13f50cd526b8ba24/IMG_3449.PNG"
       }
     }
   },
@@ -74,7 +74,7 @@ function BlogPage() {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f0693963feafd4fa5de27ed836642c04ad1d1023/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-07-01%2022.03.07.png"
+        url: "http://mandarat.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dfd0921fa98077f8932741cd81899d300e819335/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-01-23%201.12.24.png"
       }
     }
   },
@@ -87,7 +87,7 @@ function BlogPage() {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f0693963feafd4fa5de27ed836642c04ad1d1023/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-07-01%2022.03.07.png"
+        url: "http://mandarat.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb40fb519f3104c2073948c7601a3ae3996754e/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-01-23%201.19.28.png"
       }
     }
   },];

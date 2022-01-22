@@ -68,7 +68,7 @@ function WorkPage() {
     
     axios.get('/api/v1/portfolios.json')
     .then(resp => {
-      console.log(resp.data)
+      // console.log(resp.data)
       setPortfolios(resp.data);
     })
     .catch(e => {
