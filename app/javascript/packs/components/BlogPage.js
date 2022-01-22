@@ -18,10 +18,11 @@ function BlogPage() {
       // type: "VIDEO",
       source: {
         url: "https://www.youtube.com/embed/qsaeIzauV3E",
-        type: "mp4"
+        // type: "mp4"
       },
       type: "VIDEO",
-      name: "Pearl Harbor"
+      // type: muted,
+      name: "Pearl Harbor",
     }
   },
   {
@@ -97,9 +98,10 @@ function BlogPage() {
       <ParticleComponent theme='dark' />
       <Chrono items={items}
       slideShow
-      mode="VERTICAL_ALTERNATING"
       muted
-      
+      autoplay
+      mode="VERTICAL_ALTERNATING"
+
        />
       
     </div>
