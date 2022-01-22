@@ -12,7 +12,9 @@ require('jquery')
 require("./three1.js")
 
 // require("chartkick")
-// require("chart.js")
+
+
+
 
 
 
