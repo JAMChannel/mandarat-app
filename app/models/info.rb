@@ -30,11 +30,9 @@
 class Info < ApplicationRecord
   require 'slack-ruby-client'
 
-
   belongs_to :mandarat
   belongs_to :user
   def self.slack
-
     # puts "test"
 
     # Slack.configure do |config|
@@ -52,6 +50,5 @@ class Info < ApplicationRecord
       channel: '#test',
       text: 'https://mandarat.com//infos/new'
     )
-
   end
 end

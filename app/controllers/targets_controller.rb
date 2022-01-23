@@ -10,7 +10,6 @@ class TargetsController < ApplicationController
       # @item << target.where(solved1: true)
     end
     # binding.pry
-
   end
 
   def new; end

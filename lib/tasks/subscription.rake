@@ -9,6 +9,5 @@ namespace :subscription do
     #   channel: '#test',
     #   text: 'http://localhost:3000/infos/new'
     # )
-
   end
 end

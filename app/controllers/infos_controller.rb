@@ -1,5 +1,5 @@
 class InfosController < ApplicationController
-  before_action :require_login, only: %i[ new create ]
+  before_action :require_login, only: %i[new create]
   def new
     # client = Slack::Web::Client.new
     # client.chat_postMessage(
@@ -80,17 +80,18 @@ class InfosController < ApplicationController
   end
 
   private
+
   def info_params
     params.require(:info).permit(
-      :solved1, 
-      :solved2, 
-      :solved3, 
-      :solved4, 
-      :solved5, 
-      :solved6, 
-      :solved7, 
-      :solved8, 
-      :mandarat_id).merge(user_id: current_user.id)
+      :solved1,
+      :solved2,
+      :solved3,
+      :solved4,
+      :solved5,
+      :solved6,
+      :solved7,
+      :solved8,
+      :mandarat_id
+    ).merge(user_id: current_user.id)
   end
-
 end

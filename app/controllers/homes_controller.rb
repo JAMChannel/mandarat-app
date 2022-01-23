@@ -14,7 +14,6 @@ class HomesController < ApplicationController
   end
 
   def port_params
-    params.require(:portfolio).permit(:name,:text,:url,:image,:github,:tagnames)
+    params.require(:portfolio).permit(:name, :text, :url, :image, :github, :tagnames)
   end
-
 end

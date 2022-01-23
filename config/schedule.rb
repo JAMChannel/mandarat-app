@@ -20,7 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 
 # Rails.rootを使用するために必要
-require File.expand_path(File.dirname(__FILE__) + "/environment")
+require File.expand_path(File.dirname(__FILE__) + '/environment')
 set :path_env, ENV['PATH']
 job_type :runner, "cd :path && PATH=':path_env' bin/rails runner -e :environment ':task' :output"
 
@@ -34,8 +34,8 @@ set :environment, rails_env
 set :output, "#{Rails.root}/log/cron.log"
 
 # every 1.minute do
-every :day, at: "9:00 am" do
-  runner "Info.slack"
+every :day, at: '9:00 am' do
+  runner 'Info.slack'
   # rake 'subscription:update'
   # runner "InfosController.new"
   # begin

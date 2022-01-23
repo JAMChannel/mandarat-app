@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  root 'homes#index'
 
-root 'homes#index'
-
-  resources :homes, only: [:new,:create]
+  resources :homes, only: %i[new create]
 
   resources :users
   get 'login', to: 'user_sessions#new'
@@ -11,7 +10,7 @@ root 'homes#index'
 
   resources :mandarats
   resources :targets
-  resources :infos, only: [:new,:create]
+  resources :infos, only: %i[new create]
 
   namespace :api do
     namespace :v1 do

@@ -39,7 +39,7 @@ class Form::MandaratCollection
       mandarats.map(&:save!)
     end
     true
-      rescue => e
+  rescue StandardError => e
     false
   end
 end
