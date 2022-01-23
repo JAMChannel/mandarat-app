@@ -117,12 +117,12 @@ Twitterや株価の情報をAPIを取得してより具体的なデータを元�
 - SNS認証  
 より簡単にログインすることができるように実装予定。
 
-- Rspec
+- Rspec  
 https://github.com/JAMChannel/mandarat-app/issues/39  
 転職先環境によってはtest必須だと感じた場合  
 Rspecを導入して本ポートフォリオに導入予定
 
-- エラーメッセージ（フラッシュメッセージ）
+- エラーメッセージ（フラッシュメッセージ）  
 https://github.com/JAMChannel/mandarat-app/issues/38  
 テストリリース時は個人仕様のため不要かと存じますが、  
 誰かに見てもらうときは必要かと感じた為追加で実装予定  
