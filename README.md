@@ -48,7 +48,7 @@ https://mandarat.com/
 
 
 ## テーブル設計(ER図)
-![](https://gyazo.com/397fe95a28f7bc9010382a59484c5643/raw)  
+![](https://gyazo.com/774f36b2c44282a552bd7a94e5741ad0/raw)  
 
 # 機能実装
 ## トップページ(転職活動中のみ公開)   
