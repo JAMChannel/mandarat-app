@@ -31,4 +31,8 @@ class User < ApplicationRecord
   has_many :mandarats, dependent: :destroy
   has_many :infos, dependent: :destroy
   has_one :mandarat_title, dependent: :destroy
+  has_many :authentications, dependent: :destroy
+
+  # 認証
+  accepts_nested_attributes_for :authentications # has_many :authenticationsより下に書く
 end
