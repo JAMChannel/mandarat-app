@@ -82,7 +82,7 @@ Rails.application.config.sorcery.configure do |config|
   # Default: `[]`
   #
   # config.external_providers =
-  config.external_providers = [:facebook]  # 外部認証に使用するもののみ追加
+  config.external_providers = [:facebook ,:google]  # 外部認証に使用するもののみ追加
 
   # 例 [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line]
 
@@ -136,6 +136,13 @@ Rails.application.config.sorcery.configure do |config|
   config.facebook.parse = :json
   config.facebook.api_version = 'v6.0'
   #
+  config.google.key = ENV['GOOGLE_CLIENT_ID']
+  config.google.secret = ENV['GOOGLE_CLIENT_SECRET']
+  config.google.callback_url = ENV["SORCERY_GOOGLE_CALLBACK_URL"]
+  # config.google.callback_url = "http://localhost:3000/oauth/callback?provider=google"
+  config.google.user_info_mapping = {:email => "email", :username => "name"}
+  config.google.scope = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+  
   # config.instagram.key = ""
   # config.instagram.secret = ""
   # config.instagram.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=instagram"
@@ -170,11 +177,6 @@ Rails.application.config.sorcery.configure do |config|
   # config.google.user_info_mapping = { email: 'email' }
   # config.google.scope = 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
   #
-  # config.google.key = ""
-  # config.google.secret = ""
-  # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
-  # config.google.user_info_mapping = {:email => "email", :username => "name"}
-  # config.google.scope = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
   #
   # For Microsoft Graph, the key will be your App ID, and the secret will be your app password/public key.
   # The callback URL "can't contain a query string or invalid special characters"
