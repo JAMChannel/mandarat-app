@@ -18,7 +18,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  validates :username, uniqueness: true, presence: true
+  # validates :username, uniqueness: true, presence: true
   validates :email, uniqueness: true, presence: true
 
   # new_record?はobjectが保存されていないときだけtrue

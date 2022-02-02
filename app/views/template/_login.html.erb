@@ -5,7 +5,10 @@
     <div class="wp-social-login-widget">
       <div class="wp-social-login-connect-with">Connect with:</div>
       <div class="wp-social-login-provider-list">
-        <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook btn btn-primary  mx-1 ripple-surface" data-provider="Facebook" role="button" style="min-width: 37px;"><i class="fab fa-facebook-f"></i></a>
+        <%# <a rel="nofollow"_ootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook btn btn-primary  mx-1 ripple-surface" data-provider="Facebook" role="button" style="min-width: 37px;"><i class="fab fa-facebook-f"></i></a> %>
+        <%= link_to auth_at_provider_path(:provider => :facebook), title:"Connect with Google",class:"wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" do %>
+          <i class="fab fa-facebook-f"></i>
+        <% end %>
         <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" data-provider="Google" role="button"><i class="fab fa-google"></i></a>
         <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter btn btn-primary  mx-1" data-provider="Twitter" role="button"><i class="fab fa-twitter"></i></a>
       </div>

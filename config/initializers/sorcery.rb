@@ -4,7 +4,8 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = [:external]
+# Rails.application.config.sorcery.submodules = [:external]
+Rails.application.config.sorcery.submodules = %i[external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -82,6 +83,7 @@ Rails.application.config.sorcery.configure do |config|
   #
   # config.external_providers =
   config.external_providers = [:facebook]  # 外部認証に使用するもののみ追加
+
   # 例 [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line]
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -124,13 +126,15 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.facebook.key = ENV['FACEBOOK_CLIENT_ID']
   config.facebook.secret = ENV['FACEBOOK_CLIENT_SECRET']
-  config.facebook.callback_url = "http://localhost:3000//oauth/callback?provider=facebook"
-  config.facebook.user_info_path = "me?fields=email"
-  config.facebook.user_info_mapping = {:email => "email"}
+  config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
+  
+  config.facebook.user_info_path = "me?fields=email,first_name"
+  config.facebook.user_info_mapping = {:email => "email", :username => "first_name"}
   config.facebook.access_permissions = ["email"]
   config.facebook.display = "page"
-  config.facebook.api_version = "v12.0"
+  # config.facebook.api_version = "v12.0"
   config.facebook.parse = :json
+  config.facebook.api_version = 'v6.0'
   #
   # config.instagram.key = ""
   # config.instagram.secret = ""
