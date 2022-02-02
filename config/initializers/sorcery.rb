@@ -126,8 +126,8 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.facebook.key = ENV['FACEBOOK_CLIENT_ID']
   config.facebook.secret = ENV['FACEBOOK_CLIENT_SECRET']
-  config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
-  
+  config.facebook.callback_url = ENV["SORCERY_FACEBOOK_CALLBACK_URL"]
+  # config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
   config.facebook.user_info_path = "me?fields=email,first_name"
   config.facebook.user_info_mapping = {:email => "email", :username => "first_name"}
   config.facebook.access_permissions = ["email"]
