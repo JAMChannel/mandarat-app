@@ -93,3 +93,8 @@ gem 'chartkick'
 
 # メタタグ
 gem 'meta-tags'
+
+# sns認証（Google）
+# gem 'omniauth-google-oauth2'
+# gem "omniauth-rails_csrf_protection"
+# gem 'omniauth', '~>1.9.1'

@@ -45,7 +45,7 @@ display: flex;
     bottom: 14%;
     left: 50%;
     transform: translate(-50%,0%);
-    width: 86%;
+    width: 83%;
     height: auto;
 }
 `
