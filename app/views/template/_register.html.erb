@@ -1,21 +1,20 @@
-<!-- <form id="register" class="text-center needs-validation" action="register" method="post" name="register-form"> -->
 <%= form_with model: user ,url: users_path, local: true do |f| %>
   <p class="status"></p>
   <div class="text-center mb-3">
     <div class="wp-social-login-widget">
       <div class="wp-social-login-connect-with">Connect with:</div>
       <div class="wp-social-login-provider-list">
-        <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook btn btn-primary  mx-1 ripple-surface" data-provider="Facebook" role="button" style="min-width: 37px;"><i class="fab fa-facebook-f"></i></a>
-        <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" data-provider="Google" role="button"><i class="fab fa-google"></i></a>
-        <a rel="nofollow" href="https://mdbootstrap.com/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter btn btn-primary  mx-1" data-provider="Twitter" role="button"><i class="fab fa-twitter"></i></a>
+        <%= link_to auth_at_provider_path(:provider => :facebook), title:"Connect with Google",class:"wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" do %>
+          <i class="fab fa-facebook-f"></i>
+        <% end %>
+        <%= link_to auth_at_provider_path(:provider => :google), title:"Connect with Google",class:"wp-social-login-provider wp-social-login-provider-google btn btn-primary  mx-1" do %>
+          <i class="fab fa-google"></i>
+        <% end %>
       </div>
     </div>
   </div>
   <p class="text-center">or:</p>
-  <!-- Name input -->
-
   <div class="form-outline form-auth-mdb mb-4">
-    <!-- <input type="text" id="signonusername" class="form-control" name="signonusername" required="" minlength="3"> -->
     <%= f.text_field :username, autofocus: true ,class: "form-control",id:"signonusername",required: ""%>
     <label for="signonusername" class="form-label" style="margin-left: 0px;">Your username</label>
     <div class="invalid-feedback">Please provide a valid username.</div>
@@ -26,7 +25,6 @@
     </div>
   </div>
   <div class="form-outline form-auth-mdb mb-4">
-    <!-- <input type="email" id="signonemail" class="form-control" name="email" required=""> -->
     <%= f.email_field :email, autofocus: true, id: "signonemail", autocomplete: "email",class: "form-control",required: "" %>
     <label for="email" class="form-label" style="margin-left: 0px;">Your email</label>
     <div class="invalid-feedback">Please provide a valid email.</div>
@@ -37,7 +35,6 @@
     </div>
   </div>
   <div class="form-outline form-auth-mdb mb-4">
-    <!-- <input type="password" id="signonpassword" class="form-control" name="signonpassword" autocomplete="off" required="" minlength="5"> -->
     <%= f.password_field :password, autocomplete: "new-password",class: "form-control", id: "signonpassword" , required: ""%>
     <label for="signonpassword" class="form-label" style="margin-left: 0px;">Your password</label>
     <div class="invalid-feedback">Please provide a valid password.</div>
@@ -48,7 +45,6 @@
     </div>
   </div>
   <div class="form-outline form-auth-mdb mb-4">
-    <!-- <input type="password" id="password2" class="form-control" name="password2" autocomplete="off" required="" minlength="5"> -->
     <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control", id: "password2", required: ""%>
     <label for="password2" class="form-label" style="margin-left: 0px;">Repeat password</label>
     <div id="repeat-password-feedback" class="invalid-feedback">Please repeat the password.</div>
@@ -65,4 +61,3 @@
     Sign up
   </button>
 <% end %>
-<!-- </form> -->

@@ -14,7 +14,6 @@
           <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <%# binding.pry %>
           <% if current_user.infos.present? %>
             <% @ave = current_user.infos.average(:ave).round(1).to_f %>
             <% @items = current_user.infos.select(:created_at,:ave) %>
@@ -27,7 +26,6 @@
               <% end %>
             <% end %>
             <div>
-            <%# binding.pry %>
               <div class="chart">
                 <div class="percentage" data-percent="<%= @ave %>">
                   <span><%= @ave %></span><sup>%</sup>
