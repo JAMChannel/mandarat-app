@@ -74,6 +74,10 @@ https://github.com/JAMChannel/mandarat-app/issues/18
 
 ![](https://gyazo.com/4c7104f04684d51f52cf9d342ea7e003/raw)  
 modalを利用してログインページを実装
+## ログイン（SNS認証）  
+
+![](https://gyazo.com/8ab79fdaff490d357b042bec9ca065ea/raw)  
+ Google, Facebookを利用して簡単にログインができるように実装
 ## slackに定期アンケート通知
 ![](https://gyazo.com/405fc829553f6e522e91f9d9e3bb1909/raw)  
 
@@ -115,8 +119,6 @@ https://github.com/JAMChannel/mandarat-app/issues/19
 Twitterや株価の情報をAPIを取得してより具体的なデータを元にSNSを運用  
 できるように実装予定。
 
-- SNS認証  
-より簡単にログインすることができるように実装予定。
 
 - Rspec  
 https://github.com/JAMChannel/mandarat-app/issues/39  
