@@ -48,7 +48,8 @@ https://mandarat.com/
 
 
 ## テーブル設計(ER図)
-![](https://gyazo.com/774f36b2c44282a552bd7a94e5741ad0/raw)  
+![](https://gyazo.com/0f2d56368eb5331400c9d49782df2e95/raw)  
+https://gyazo.com/0f2d56368eb5331400c9d49782df2e95  
 
 # 機能実装
 ## トップページ(転職活動中のみ公開)   
@@ -67,8 +68,9 @@ https://github.com/JAMChannel/mandarat-app/issues/18
 
 
 ## トップページ（Timelineページ)
+トップ
 ![](https://gyazo.com/5f38be37aa0b1e46276eec9976ffa6ef/raw)  
-- トップページはReact.jsを活用し経歴を紹介   
+- トップページはReact.jsを活用しSPAにて実装
 
 ## ログイン（modal）  
 
@@ -97,6 +99,9 @@ https://github.com/JAMChannel/mandarat-app/issues/29
 https://github.com/JAMChannel/mandarat-app/issues/34
 
 #### 新規投稿
+![](https://gyazo.com/981ab80ad2331bcd3826c9127bacde27/raw)  
+一括投稿ができるようにformオブジェクトを利用して複数回投稿しなくても  
+一回で完結できるように実装。  
 https://github.com/JAMChannel/mandarat-app/issues/10
 
 
