@@ -5,10 +5,7 @@ https://mandarat.com/
  log in: jam  
  pw: 1049  
 
-- マンダラート確認したい方用  
- log in: guest@guest  
- pw: 1049  
- ※今回確認用ログインを設けますので新規登録はご遠慮ください！！
+新規登録はご遠慮ください！！
 
 
 
