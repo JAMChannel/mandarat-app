@@ -1,9 +1,7 @@
 # mandarat-app
 データを取りたいので一旦,最低限の実装を行い本番環境にリリース  
 https://mandarat.com/  
-- basic認証  
- log in: jam  
- pw: 1049  
+
 
 新規登録はご遠慮ください！！
 
