@@ -3,7 +3,7 @@
 https://mandarat.com/  
 
 
-新規登録はご遠慮ください！！
+
 
 
 
